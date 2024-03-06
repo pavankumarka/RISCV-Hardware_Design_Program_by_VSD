@@ -1,0 +1,5 @@
+Requirement: 4bit counter
+
+Start condition: 0
+Reset condition: 16
+delay condition: Display count, after every increment in count, wait for 0.5msec 
