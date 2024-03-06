@@ -12,7 +12,7 @@ Summary: Design and build Application software which can be compiled for RISC-V 
 4. Write C-Program (or any High-level language) for the application (Embedded app).
 5. Verify C-code using compiler for RISC-V using Godbolt.org online compiler.
    Gotbolt also supports other CPU architectures and compilers.
-7. Dump the compiled code into RISC-V for post-silicon verification
+7. Dump the compiled code into RISC-V for pre-silicon verification on ChipCron tool. 
 8. Define GPIO registers.
 9. Convert C to verilog for Device Uner Test (DUT)- plan HDL design and verification.
 10. Write test bench for DUT via simulation.
