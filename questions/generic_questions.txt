@@ -1,0 +1,2 @@
+1. What happens to header files when compiled to ASM? 
+2. At what stage user can notice header files been linked? 
