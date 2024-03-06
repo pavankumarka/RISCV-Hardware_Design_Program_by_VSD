@@ -1,0 +1,11 @@
+1. How to overcome Oracle VirtualBox's VDI file unable to open due to signature error?
+Ans >>> Downgrade the VirtualBox version from 7.x to 5.x. other way to overcome is by 
+reinstalling VBox without deleting vdi file.
+
+2. How to add shared folder to Virtual Machine (VM)?
+Ans>>> In VM settings --> select Shared folder --> add and select shared folder --> click on "make it permanent" -->
+restart the VM.
+
+3. How to add network interface to the VM?
+Ans>>> In VM settings --> select Network interface --> select NAT or Bridged Adoptor --> in advance settings, select the 
+network interface same as in Windows Device Manager. 
