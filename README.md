@@ -3,7 +3,7 @@ The "RISC-V Hardware Design Program" or "Product Based RISC-V Skilling Program" 
 
 Instructors:
 1. Mayank Kabra
-2. 2. Kunal Ghosh
+2. Kunal Ghosh
 
 
 Workshop agenda for Six weeks:
