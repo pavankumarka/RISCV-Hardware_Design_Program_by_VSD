@@ -22,16 +22,18 @@ Summary: Design and build Application software which can be compiled for RISC-V 
 Workshop agenda for Six weeks:
 
 0. week0:
-   0.1 Build Remote lab setup on Windows 11 - Intel based CPU system.
+   0.1 Build Remote lab setup installed on ubuntu as a Virtual Machine on Windows 11 - Intel based CPU system.
+
+   0.2 Create github account to capture VSD-HDP course highlights and lab procedures for week1 to week6.
     
-1. week1:
+2. week1:
 
-2. week2:
+3. week2:
    
-3. week3:
+4. week3:
 
-4. week4:
+5. week4:
 
-5. week5:
+6. week5:
 
-6. week6:
+7. week6:
