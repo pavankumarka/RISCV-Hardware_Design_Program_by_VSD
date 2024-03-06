@@ -26,14 +26,17 @@ Workshop agenda for Six weeks:
 
    0.2 Create github account to capture VSD-HDP course highlights and lab procedures for week1 to week6.
     
-2. week1:
+1. week1:
+   Godbolt tool link: https://godbolt.org/ 
+   1.1 Design 4bit counter on Godbolt tool
+   1.2 Design Matrix Multiplication on Godbolt tool.
 
-3. week2:
+2. week2:
    
-4. week3:
+3. week3:
 
-5. week4:
+4. week4:
 
-6. week5:
+5. week5:
 
-7. week6:
+6. week6:
