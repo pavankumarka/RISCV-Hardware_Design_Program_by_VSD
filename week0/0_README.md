@@ -1,10 +1,8 @@
-week0 Agenda: 
+week0 Agenda: Build Lab Setup on Windows 11.
 
-Build Lab Setup on Windows 11.
 
-0.1 System configuration: 
 
-VSD-HDP Workshop course needs a computer system with, 
+Week0: 0.1 System configuration: VSD-HDP Workshop course needs a computer system with, 
 
 1. 100GB HDD/SDD of free hard-disc space.
 
@@ -13,7 +11,7 @@ VSD-HDP Workshop course needs a computer system with,
 3. 1CPU (Minimum) with Virtualization mode ON in BIOS settings.
 
 
-0.2 Easy to follow Steps on Windows 11:
+Week0: 0.2 Easy to follow lab setup steps on Windows 11 if system configuration is met:
 
 1. Download and Install Oracle VirtualBox 5.x or later version.
 
@@ -34,6 +32,6 @@ VSD-HDP Workshop course needs a computer system with,
 
     4.2 5_Add_shared_folder_for_VM_and_windows.PNG
 
-Build lab setup on Linux:
+Week0: 0.3 Build lab setup on Linux:
 
-0.3 For more specific steps, build Remote lab setup on Windows/linux follow instructions document provided in "steps to open VDI.pdf" file.
+0.3 For more specific steps, build Remote lab setup on Windows/linux follow instructions document provided in "steps_to_open_VDI.pdf" file.
