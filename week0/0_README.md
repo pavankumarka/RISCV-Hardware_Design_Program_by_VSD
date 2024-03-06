@@ -21,6 +21,7 @@ VSD-HDP Workshop course needs a computer system with,
 4. Additional steps: to add network adopter and shared folder follow highlights given in image capture 4 and 5.
 
     4.1 4_Network_adoptor_settings.PNG.
+
     4.2 5_Add_shared_folder_for_VM_and_windows.PNG
 
 Build lab setup on Linux:
