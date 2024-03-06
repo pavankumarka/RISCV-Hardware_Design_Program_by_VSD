@@ -22,13 +22,18 @@ Summary: Design and build Application software which can be compiled for RISC-V 
 Workshop agenda for Six weeks:
 
 0. week0:
+   
    0.1 Build Remote lab setup installed on ubuntu as a Virtual Machine on Windows 11 - Intel based CPU system.
-
+   
    0.2 Create github account to capture VSD-HDP course highlights and lab procedures for week1 to week6.
+
     
 1. week1:
+
    Godbolt tool link: https://godbolt.org/ 
+
    1.1 Design 4bit counter on Godbolt tool
+
    1.2 Design Matrix Multiplication on Godbolt tool.
 
 2. week2:
