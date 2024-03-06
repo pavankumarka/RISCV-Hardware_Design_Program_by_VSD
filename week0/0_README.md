@@ -19,6 +19,7 @@ VSD-HDP Workshop course needs a computer system with,
     3.3 3_select_vi_image_to_create_vm.PNG
 
 4. Additional steps: to add network adopter and shared folder follow highlights given in image capture 4 and 5.
+
     4.1 4_Network_adoptor_settings.PNG.
     4.2 5_Add_shared_folder_for_VM_and_windows.PNG
 
