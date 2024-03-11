@@ -55,9 +55,13 @@ Week0: 0.2 Easy to follow lab setup steps on Windows 11 if system configuration 
 
 Week0: 0.3 Build lab setup on Linux:
 
-0.3 For more specific steps to build Remote lab setup on Windows follow instructions document provided in "steps_to_open_VDI.pdf" file. Similarly for installation of VDI image on Linux, follow last section of same file.
+0.3 For more specific steps to build Remote lab setup on Windows follow instructions document provided in "steps_to_open_VDI.pdf" file. 
+
+For installation of VDI image on Linux, follow last section of the same file or from link below.
 
 Link: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week0/Steps_to_open_VDI.pdf 
+
+For installation on iOS with M3 chipset, refer https://github.com/riscv-software-src/homebrew-riscv
 
 
 NOTE:Refer Challenges on installing VDI file section to resolve issues that are not covered in the REAME.m section
