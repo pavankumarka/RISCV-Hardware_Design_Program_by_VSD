@@ -3,6 +3,8 @@
 **Program Overview:** The "RISC-V Hardware Design Program" or "Product Based RISC-V Skilling Program" is a Six weeks of practical/lab 
 oriented workshop course, for Hardware-Software Co-simulation focused product design enthusiast's, taught by VSD Team.
 
+Link: https://www.vlsisystemdesign.com/hdp_riscv/ 
+
 
 **Instructors:**
 
