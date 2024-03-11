@@ -34,15 +34,20 @@ Week0: 0.2 Easy to follow lab setup steps on Windows 11 if system configuration 
 
    ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/49f52b43-22c3-4944-b3c4-b635ebd129d3)
 
+   3.4 4_linux_VM_on_Windows_OS_after_installation.PNG
+
+   ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/51c8d114-4f81-4aa4-8965-fe97282cb4e3)
+
+
 
 5. Additional steps: to add network adopter and shared folder follow highlights given in image capture 4 and 5.
 
-    4.1 4_Network_adoptor_settings.PNG.
+    4.1 5_Network_adoptor_settings.PNG.
 
    ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/3cf6fab1-d0d1-4254-a35d-f95acdc07f8d)
 
 
-    4.2 5_Add_shared_folder_for_VM_and_windows.PNG
+    4.2 6_Add_shared_folder_for_VM_and_windows.PNG
 
    ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/fe011849-63e8-492d-bdf3-e48114cd88c4)
 
