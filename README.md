@@ -36,7 +36,7 @@ oriented workshop course, for Hardware-Software Co-simulation focused product de
 
 **Workshop agenda for Six weeks:**
 
-week0:
+week0: Link: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree/main/week0  
 
   Task1:
 
