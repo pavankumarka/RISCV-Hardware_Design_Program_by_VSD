@@ -1,4 +1,4 @@
-week0 Agenda: Build Lab Setup on Windows 11.
+**week0 Agenda: Build Lab Setup on Windows 11.**
 
 
 
