@@ -17,9 +17,10 @@ Week0: 0.2 Easy to follow lab setup steps on Windows 11 if system configuration 
 
 2. Download Virtual Device Image (*.VDI) from link shared by VSD team.
     Link: https://forgefunder.com/~kunal/riscv_workshop.vdi 
+
     Note: This is 13GB file by name riscv_workshop.vdi, occupies specified or default download folder space.
 
-3. For quick start, open VirtualBox, click on "New", select RAM and select VDI image file to create new / add Virtual Machine as shown in *.PNG files 1 to 3.
+4. For quick start, open VirtualBox, click on "New", select RAM and select VDI image file to create new / add Virtual Machine as shown in *.PNG files 1 to 3.
     3.1 1_VirtualBox_Create_New.PNG
 
    ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/bc153e0d-b5a0-41bd-8f3a-c1d5f9412f65)
