@@ -12,7 +12,7 @@ oriented workshop course, for Hardware-Software Co-simulation focused product de
 
 
 
-**Opensource Tools:** (Preinstalled VDI image has following tools)
+**Opensource Tools:** (Preinstalled VDI image provided by VSD team has following tools)
 
 1. gcc compiler.
 2. iVerilog.
