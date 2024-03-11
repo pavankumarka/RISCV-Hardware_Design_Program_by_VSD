@@ -36,17 +36,20 @@ oriented workshop course, for Hardware-Software Co-simulation focused product de
 
 **Workshop agenda for Six weeks:**
 
-week0: Link: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree/main/week0  
+week0: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree/main/week0  
 
   Task1:
 
-    0.1.1 Build Remote lab setup installed on ubuntu as a Virtual Machine on Windows 11 - Intel based CPU system.
+    0.1.1 Build HDP program required offline lab setup by installing ubuntu as a Virtual Machine 
+    on Windows 11 OS - for 64bit_x86 based CPU system.
 
-    0.1.2 Create github account to capture VSD-HDP course highlights and lab procedures for week1 to week6.
+    0.1.2 Create github account and capture VSD-HDP course highlights, and agenda in week1 to week6.
 
-week1:
+week1: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree/main/week1
 
-  Task1:
+  Task1: 
+  
+  List Assembly Language observations for AVR(Arduino), RISC-V and x86 processors using following modules.  
 
     1.1.1 Design 4bit counter on Godbolt tool (Godbolt tool link: https://godbolt.org/)
 
