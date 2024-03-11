@@ -41,7 +41,7 @@ Week0: 0.2 Easy to follow lab setup steps on Windows 11 if system configuration 
 
 
 
-5. Additional steps: to add network adopter and shared folder follow highlights given in image capture 4 and 5.
+5. Additional steps: to add network adopter and shared folder follow highlights given in image capture 5 and 6.
 
     4.1 5_Network_adoptor_settings.PNG.
 
@@ -59,3 +59,5 @@ Week0: 0.3 Build lab setup on Linux:
 
 Link: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week0/Steps_to_open_VDI.pdf 
 
+
+NOTE:Refer Challenges on installing VDI file section to resolve issues that are not covered in the REAME.m section
