@@ -76,5 +76,5 @@ week5:
 week6:
 
 
-**Summary:** Design and build Application software which can be compiled for RISC-V hardware architecture and simulate same using Hardware Description language and test-benches.
+**Summary:** Design and build Application software which can be compiled for RISC-V hardware architecture, and simulate same using Hardware Description language and test-benches on opensource tools.
  
