@@ -27,7 +27,7 @@ oriented workshop course, for Hardware-Software Co-simulation focused product de
 2. Convert application Design Input/output with software and Hardware co-simulation mindset.
 3. Convert App design to State Machine.
 4. Write C-Program (or any High-level language) for the application (Embedded app).
-5. Verify C-code using compiler for RISC-V using Godbolt.org online compiler. Gotbolt also supports other CPU architectures and compilers.
+5. Verify C-code using compiler for RISC-V using Godbolt.org online compiler.
 6. Dump the compiled code into RISC-V for pre-silicon verification on ChipCron tool.
 7. Define GPIO registers.
 8. Convert C to verilog for Device Uner Test (DUT)- plan HDL design and verification.
@@ -73,5 +73,5 @@ week5:
 week6:
 
 
-**Summary:** Design and build Application software which can be compiled for RISC-V hardware architecture and simulate same using
-Hardware Description language and test-benches.
+**Summary:** Design and build Application software which can be compiled for RISC-V hardware architecture and simulate same using Hardware Description language and test-benches.
+ 
