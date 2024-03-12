@@ -21,4 +21,14 @@ Task1:
 Solutions:
 
 Task2:
-    Assignment: 
+    Assignments: 
+
+    1. Calculate 1's and 2's compliment using signed number representation for these, A. 10-19        B. 20+30        C. 36+12
+
+    2. Design ALU in C-code and verify using gcc compiler and notedown the observations wrt gotbold comipler.
+
+    3. Design the same ALU code in verilog and verify it using iVerilog and gtkwave.
+
+    Design Requirments:
+    Select lines to select mathematical operations.
+    
