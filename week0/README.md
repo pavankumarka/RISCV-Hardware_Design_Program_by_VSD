@@ -64,4 +64,4 @@ Link: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/
 For installation on iOS with M3 chipset, refer https://github.com/riscv-software-src/homebrew-riscv
 
 
-NOTE:Refer Challenges on installing VDI file section to resolve issues that are not covered in the REAME.m section
+NOTE:Refer Challenges on installing VDI file section to resolve issues that are not covered in the REAME section
