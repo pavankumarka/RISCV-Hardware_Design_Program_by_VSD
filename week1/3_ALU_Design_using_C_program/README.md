@@ -3,6 +3,7 @@
 A Simple ALU design is described and implemented here
 
 Refer PICTURE 1 to 3 below for Design Requirement and the output screenshots which are self explainatory.
+
 C-program for ALU design requirement is captured in alu.c file 
 
 PICTURE1: Design Requirement Captured:
