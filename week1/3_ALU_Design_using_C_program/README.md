@@ -8,7 +8,7 @@ C-program for ALU design requirement is captured in alu.c file
 
     1. alu.s is the assembly code for alu.c c-program, that is compiled in local Linux computer  
 
-    2. gotbold_alu_gcc.s is the assembly code for alu.c c-program, that is compiled using GOTBOLT COMPILER providedd x86_64 gcc
+    2. gotbold_alu_gcc.s is the assembly code for alu, compiled using GOTBOLT COMPILER by selecting x86_64 gcc 13.2.
 
 **PICTURE1: ALU Design Requirement:**
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/ccdf8cc3-ef27-4540-8c8b-2be72352ff45)
