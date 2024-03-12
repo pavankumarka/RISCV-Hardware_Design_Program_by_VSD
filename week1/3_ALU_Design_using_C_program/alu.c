@@ -3,18 +3,18 @@
  * Design Requirement	: 1. Read 1 to 5 from terminal 	
  *                        2. Display corresponing operation +,-,X,/,% 
  * 
- * Author				: Pavan Kumar K Arakere
+ * Author		: Pavan Kumar K Arakere
  *
  * Mathematical operator: 1.Add  2.Sub  3.Mul  4.Div  5.Mod
- * 			  			  6.NOT  7.OR   8.AND  9.NOR  A.NAND  B.XOR  C.XNOR  
+ * 			  6.NOT  7.OR   8.AND  9.NOR  A.NAND  B.XOR  C.XNOR  
  *
  * This Program supports both With / without command line arguments (CLA)
  * Eg1: Run with CLA	: alu.a 10 
- * Output				: Perform NAND operation
+ * Output		: Perform NAND operation
  *
  * Eg2: Run without CLA	: alu.a
- * Input				: Enter no. b/n 0x01 to 0x0C to perform ALU operation:4
- * Output				: Perform DIVISION operation
+ * Input		: Enter no. b/n 0x01 to 0x0C to perform ALU operation:4
+ * Output		: Perform DIVISION operation
  *
  * Additional Design: 
  * Command Line arguments process accepts Integer values (0-12)
@@ -177,6 +177,6 @@ printAluErrMsg ( int ErrNum ){
 			dispAluSuppOptnMsg();
 			break;
 	}
-
+	
 	return;
 }
