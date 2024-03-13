@@ -1,5 +1,12 @@
-	.file	"alu.c"
+	.file	"alu_with_outValUpdated.c"
 	.text
+	.globl	aluOut
+	.bss
+	.align 4
+	.type	aluOut, @object
+	.size	aluOut, 4
+aluOut:
+	.zero	4
 	.section	.rodata
 	.align 8
 .LC0:
@@ -52,13 +59,16 @@ main:
 	movl	$1, %edi
 	call	printAluErrMsg
 	movl	$0, -12(%rbp)
+	movl	$0, aluOut(%rip)
 	movl	$-1, %eax
 	jmp	.L8
 .L4:
 	movl	-12(%rbp), %eax
 	movl	%eax, %edi
 	call	checkAluOptnSupport
+	movl	%eax, aluOut(%rip)
 	movl	$0, -12(%rbp)
+	movl	$0, aluOut(%rip)
 	movl	$0, %eax
 	jmp	.L8
 .L2:
@@ -89,18 +99,23 @@ main:
 	movl	-12(%rbp), %eax
 	movl	%eax, %edi
 	call	checkAluOptnSupport
+	movl	%eax, aluOut(%rip)
 	movl	$0, -12(%rbp)
+	movl	$0, aluOut(%rip)
 	movl	$0, %eax
 	jmp	.L8
 .L7:
 	movl	$1, %edi
 	call	printAluErrMsg
 	movl	$0, -12(%rbp)
+	movl	$0, aluOut(%rip)
 	movl	$-1, %eax
 	jmp	.L8
 .L6:
 	movl	$0, %edi
 	call	printAluErrMsg
+	movl	$0, -12(%rbp)
+	movl	$0, aluOut(%rip)
 	movl	$-1, %eax
 .L8:
 	movq	-8(%rbp), %rdx
@@ -156,38 +171,43 @@ dispAluSuppOptnMsg:
 	.section	.rodata
 	.align 8
 .LC7:
-	.string	"Selected ALU operation is Addition"
+	.string	"Selected ALU operation is Addition: %d\n"
 	.align 8
 .LC8:
-	.string	"Selected ALU operation is Subration"
+	.string	"Selected ALU operation is Subration: %d\n"
 	.align 8
 .LC9:
-	.string	"Selected ALU operation is Multiplication"
+	.string	"Selected ALU operation is Multiplication: %d\n"
 	.align 8
 .LC10:
-	.string	"Selected ALU operation is Division"
+	.string	"Selected ALU operation is Division: %d\n"
 	.align 8
 .LC11:
-	.string	"Selected ALU operation is Modulus"
+	.string	"Selected ALU operation is Modulus: %d\n"
+	.align 8
 .LC12:
-	.string	"Selected ALU operation is NOT"
+	.string	"Selected ALU operation is NOT: %d\n"
+	.align 8
 .LC13:
-	.string	"Selected ALU operation is OR"
+	.string	"Selected ALU operation is OR: %d\n"
+	.align 8
 .LC14:
-	.string	"Selected ALU operation is AND"
+	.string	"Selected ALU operation is AND: %d\n"
+	.align 8
 .LC15:
-	.string	"Selected ALU operation is NOR"
+	.string	"Selected ALU operation is NOR: %d\n"
 	.align 8
 .LC16:
-	.string	"Selected ALU operation is NAND"
+	.string	"Selected ALU operation is NAND: %d\n"
+	.align 8
 .LC17:
-	.string	"Selected ALU operation is XOR"
+	.string	"Selected ALU operation is XOR: %d\n"
 	.align 8
 .LC18:
-	.string	"Selected ALU operation is XNOR"
+	.string	"Selected ALU operation is XNOR: %d\n"
 	.align 8
 .LC19:
-	.string	"Selected unknown ALU operation"
+	.string	"Selected unknown ALU operation: %d\n"
 	.text
 	.globl	checkAluOptnSupport
 	.type	checkAluOptnSupport, @function
@@ -230,60 +250,112 @@ checkAluOptnSupport:
 	.long	.L25-.L14
 	.text
 .L13:
+	movl	$43, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC7(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L15:
+	movl	$45, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC8(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L16:
+	movl	$42, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC9(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L17:
+	movl	$47, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC10(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L18:
+	movl	$37, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC11(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L19:
+	movl	$33, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC12(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L20:
+	movl	$124, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC13(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L21:
+	movl	$38, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC14(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L22:
+	movl	$133, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC15(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L23:
+	movl	$134, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC16(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L24:
+	movl	$135, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC17(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L25:
+	movl	$136, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC18(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	jmp	.L26
 .L12:
+	movl	$0, aluOut(%rip)
+	movl	aluOut(%rip), %eax
+	movl	%eax, %esi
 	leaq	.LC19(%rip), %rdi
-	call	puts@PLT
+	movl	$0, %eax
+	call	printf@PLT
 	call	dispAluSuppOptnMsg
 	nop
 .L26:
-	nop
+	movl	aluOut(%rip), %eax
 	leave
 	.cfi_def_cfa 7, 8
 	ret
