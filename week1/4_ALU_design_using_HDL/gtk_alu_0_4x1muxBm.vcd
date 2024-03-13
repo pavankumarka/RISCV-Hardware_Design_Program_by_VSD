@@ -1,0 +1,62 @@
+$date
+	Wed Mar 13 16:00:01 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_alu_0_4x1muxBm $end
+$var wire 8 ! aluOut [7:0] $end
+$var reg 8 " add [7:0] $end
+$var reg 8 # div [7:0] $end
+$var reg 8 $ mul [7:0] $end
+$var reg 1 % sel0 $end
+$var reg 1 & sel1 $end
+$var reg 8 ' sub [7:0] $end
+$scope module alu_4x1muxBm_dut $end
+$var wire 8 ( add [7:0] $end
+$var wire 8 ) div [7:0] $end
+$var wire 8 * mul [7:0] $end
+$var wire 1 % sel0 $end
+$var wire 1 & sel1 $end
+$var wire 8 + sub [7:0] $end
+$var reg 8 , aluOut [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b101011 ,
+b101101 +
+b101010 *
+b101111 )
+b101011 (
+b101101 '
+0&
+0%
+b101010 $
+b101111 #
+b101011 "
+b101011 !
+$end
+#10000
+b101101 !
+b101101 ,
+1&
+#20000
+b101010 !
+b101010 ,
+0&
+1%
+#30000
+b101111 !
+b101111 ,
+1&
+#40000
+b101011 !
+b101011 ,
+0&
+0%
+#50000
