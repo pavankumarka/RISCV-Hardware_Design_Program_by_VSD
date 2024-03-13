@@ -1,6 +1,6 @@
 **ALU**
 
-An ALU is Arithematic and Logic Unit, usually found in CPU. ALU has 3 parts:
+An ALU is Arithematic and Logic Unit, usually used as a module in CPU design. ALU has 3 parts:
 
 1. Maths and Logic Unit
 
