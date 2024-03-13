@@ -22,6 +22,10 @@ A Simple "Mathematical and Logic" unit of ALU's State Machine like design is des
 
 **Output Waveform using GTKWave Tool:**
 
+Waveform shows HEX values in the "aluOut" wave.
+
+Terminal shows decimal values for the output "aluOut".
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/c0f46861-5578-47a3-ac95-0092e8182d4d)
 
 
