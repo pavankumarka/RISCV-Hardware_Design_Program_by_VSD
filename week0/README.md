@@ -1,8 +1,8 @@
-**week0 Agenda: Build Lab Setup on Windows 11.**
+**week0 Agenda: Build HDP required Lab Setup on Windows 11.**
 
 
 
-Week0: 0.1 System configuration: VSD-HDP Workshop course needs a computer system with, 
+0.1 System configuration: VSD-HDP Workshop course needs a computer system with, 
 
 1. 100GB HDD/SDD of free hard-disc space.
 
@@ -11,7 +11,7 @@ Week0: 0.1 System configuration: VSD-HDP Workshop course needs a computer system
 3. 1CPU (Minimum) with Virtualization mode ON in BIOS settings.
 
 
-Week0: 0.2 Easy to follow lab setup steps on Windows 11 if system configuration is met:
+**0.2 Easy to follow lab setup steps on Windows 11** (if system configuration is met):
 
 1. Download and Install Oracle VirtualBox 5.x / 7.x or later version.
 
@@ -52,16 +52,15 @@ Week0: 0.2 Easy to follow lab setup steps on Windows 11 if system configuration 
 
    ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/fe011849-63e8-492d-bdf3-e48114cd88c4)
 
+For more specific steps to build Remote lab setup on Windows follow instructions document provided in "steps_to_open_VDI.pdf" file. 
 
-Week0: 0.3 Build lab setup on Linux:
-
-0.3 For more specific steps to build Remote lab setup on Windows follow instructions document provided in "steps_to_open_VDI.pdf" file. 
+**0.3 Build lab setup on Linux:**
 
 For installation of VDI image on Linux, follow last section of the same file or from link below.
 
 Link: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week0/Steps_to_open_VDI.pdf 
 
-For installation on iOS with M3 chipset, refer https://github.com/riscv-software-src/homebrew-riscv
+**0.4 installation on iOS** : with M3 chipset, refer https://github.com/riscv-software-src/homebrew-riscv
 
 
 NOTE:Refer Challenges on installing VDI file section to resolve issues that are not covered in the REAME section
