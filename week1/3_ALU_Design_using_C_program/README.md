@@ -10,9 +10,9 @@ An ALU is Arithematic and Logic Unit, usually found in CPU. ALU has 3 parts:
 
   
 
-A Simple ALU's Mathematical and Logic unit design is described and implemented here:
+A Simple ALU's Mathematical and Logic unit State Machine like design is described and implemented here:
 
-Refer PICTURE 1 to 3 below for Design Requirement and the output screenshots which are self explainatory.
+Refer PICTURE 1 to 3 below for Design Requirement which are self explainatory and the output screenshots in later screenshots.
 
 C-program for ALU design requirement is captured in alu.c file 
 
