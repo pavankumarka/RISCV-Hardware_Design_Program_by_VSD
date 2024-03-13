@@ -1,6 +1,15 @@
 ****ALU****
 
 **ALU Definition**
+An ALU is Arithematic and Logic Unit, usually used as a module in CPU design. ALU has 3 parts:
+
+  1. Mathematical and Logic Unit
+
+  2. Control Unit
+
+  3. Registers
+
+A Simple "Mathematical and Logic" unit of ALU's State Machine like design is described here, implemented using verilog, verified using iverilog compiler, and test bench is written for the same design and simulated using gtkwave tool. Corresponding pictures are added below. 
 
 **Arithematic and Logic Design**
 
