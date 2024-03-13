@@ -1,12 +1,13 @@
+
 /***************************************************************************
  * Problem statement	: Design an ALU to perform Arth and Logic operations
- * Design Requirement	: 1. Read 1 to 5 from terminal 	
- *                        2. Display corresponing operation +,-,X,/,% 
+ * Design Requirement	: 1. Read 1 to 12 from terminal or CLA 	
+ *                        2. Display corresponing operation +,-,X,/,%,|,^...
  * 
  * Author		: Pavan Kumar K Arakere
  *
  * Mathematical operator: 1.Add  2.Sub  3.Mul  4.Div  5.Mod
- * 			  6.NOT  7.OR   8.AND  9.NOR  A.NAND  B.XOR  C.XNOR  
+ * Logical Operator	: 6.NOT  7.OR   8.AND  9.NOR  A.NAND  B.XOR  C.XNOR  
  *
  * This Program supports both With / without command line arguments (CLA)
  * Eg1: Run with CLA	: alu.a 10 
@@ -29,13 +30,15 @@
 #define SUCCESS 0
 #define FAILURE -1
 
+unsigned int aluOut = 0;
+
 void dispAluSuppOptnMsg( void );
-void checkAluOptnSupport( unsigned int );
+unsigned int checkAluOptnSupport( unsigned int );
 void printAluErrMsg ( int );
 
 int 
 main(int argc, char** argv){
-	
+
 	/* set default value to operator */
 	unsigned int aluOptr = 0;
 
@@ -50,19 +53,21 @@ main(int argc, char** argv){
 
 			/* reset default value to operator before exit */
 			aluOptr = 0x00;
+			aluOut  = 0x00;
 
 			/* return failure from main() */
 			return FAILURE;
 		} else { /*success case for ALU operation without command line arguments*/
-			checkAluOptnSupport( aluOptr );
+			aluOut = checkAluOptnSupport( aluOptr );
 
 			/* reset default value to operator before exit*/
 			aluOptr = 0x00;
+			aluOut  = 0x00;
 
 			/* return SUCCESS from main() */
 			return SUCCESS;
 		}
-		
+
 		/* return SUCCESS from main() */
 		return SUCCESS;
 	} else if( argc == 2 ) {
@@ -71,10 +76,11 @@ main(int argc, char** argv){
 		printf("entry point aluOptr = 0x%x\n", aluOptr);
 		if( aluOptr > 0 && aluOptr < 0x0D ){
 			printf("entry point aluOptr = 0x%x\n", aluOptr);
-			checkAluOptnSupport( aluOptr );
+			aluOut = checkAluOptnSupport( aluOptr );
 
 			/* reset default value to operator before exit*/
 			aluOptr = 0x00;
+			aluOut  = 0x00;
 
 			/* return SUCCESS from main() */
 			return SUCCESS;
@@ -83,6 +89,7 @@ main(int argc, char** argv){
 
 			/* reset default value to operator before exit */
 			aluOptr = 0x00;
+			aluOut  = 0x00;
 
 			/* return failure from main() */
 			return FAILURE;
@@ -90,6 +97,9 @@ main(int argc, char** argv){
 		}
 	} else {
 		printAluErrMsg( 0 );
+		/* reset default value to operator before exit */
+		aluOptr = 0x00;
+		aluOut  = 0x00;
 
 		/* return failure from main */
 		return FAILURE;
@@ -104,64 +114,77 @@ dispAluSuppOptnMsg( void ) {
 	printf("6.NOT  7.OR   8.AND  9.NOR  A.NAND  B.XOR  C.XNOR\n\n");
 }
 
-void 
+unsigned int 
 checkAluOptnSupport( unsigned int aluOptr){
 	switch( aluOptr ){
 		case 0x01:
-			printf("Selected ALU operation is Addition\n");
+			aluOut = '+';
+			printf("Selected ALU operation is Addition: %d\n", aluOut);
 			break;
 
 		case 0x02:
-			printf("Selected ALU operation is Subration\n");
+			aluOut = '-';
+			printf("Selected ALU operation is Subration: %d\n", aluOut);
 			break;
 
 		case 0x03:
-			printf("Selected ALU operation is Multiplication\n");
+			aluOut = '*';
+			printf("Selected ALU operation is Multiplication: %d\n", aluOut);
 			break;
 
 		case 0x04:
-			printf("Selected ALU operation is Division\n");
+			aluOut = '/';
+			printf("Selected ALU operation is Division: %d\n", aluOut);
 			break;
 
 		case 0x05:
-			printf("Selected ALU operation is Modulus\n");
+			aluOut = '%';
+			printf("Selected ALU operation is Modulus: %d\n", aluOut);
 			break;
 
 		case 0x06:
-			printf("Selected ALU operation is NOT\n");
+			aluOut = '!';
+			printf("Selected ALU operation is NOT: %d\n", aluOut);
 			break;
 
 		case 0x07:
-			printf("Selected ALU operation is OR\n");
+			aluOut = '|';
+			printf("Selected ALU operation is OR: %d\n", aluOut);
 			break;
 
 		case 0x08:
-			printf("Selected ALU operation is AND\n");
+			aluOut = '&';
+			printf("Selected ALU operation is AND: %d\n", aluOut);
 			break;
 
 		case 0x09:
-			printf("Selected ALU operation is NOR\n");
+			aluOut = 0x85;
+			printf("Selected ALU operation is NOR: %d\n", aluOut);
 			break;
 
 		case 0x0A:
-			printf("Selected ALU operation is NAND\n");
+			aluOut = 0x86;
+			printf("Selected ALU operation is NAND: %d\n", aluOut);
 			break;
 
 		case 0x0B:
-			printf("Selected ALU operation is XOR\n");
+			aluOut = 0x87;
+			printf("Selected ALU operation is XOR: %d\n", aluOut);
 			break;
 
 		case 0x0C:
-			printf("Selected ALU operation is XNOR\n");
+			aluOut = 0x88;
+			printf("Selected ALU operation is XNOR: %d\n", aluOut);
 			break;
 
 		default:
-			printf("Selected unknown ALU operation\n");
+			aluOut = 0x00;
+			printf("Selected unknown ALU operation: %d\n", aluOut);
 			dispAluSuppOptnMsg();
 			break;
 	}
 
-	return;
+	return aluOut;
 }
 
 void 
@@ -177,6 +200,6 @@ printAluErrMsg ( int ErrNum ){
 			dispAluSuppOptnMsg();
 			break;
 	}
-	
+
 	return;
 }
