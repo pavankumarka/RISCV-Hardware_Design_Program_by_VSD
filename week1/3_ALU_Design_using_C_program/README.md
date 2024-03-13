@@ -1,6 +1,16 @@
 **ALU**
 
-A Simple ALU design is described and implemented here
+An ALU is Arithematic and Logic Unit, usually found in CPU. ALU has 3 parts:
+
+1. Maths and Logic Unit
+
+2. Control Unit
+
+3. Registers
+
+  
+
+A Simple ALU's Mathematical and Logic unit design is described and implemented here:
 
 Refer PICTURE 1 to 3 below for Design Requirement and the output screenshots which are self explainatory.
 
