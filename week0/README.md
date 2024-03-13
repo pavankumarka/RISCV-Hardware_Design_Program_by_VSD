@@ -2,7 +2,7 @@
 
 
 
-0.1 System configuration: VSD-HDP Workshop course needs a computer system with, 
+**0.1 System configuration:** VSD-HDP Workshop course needs a computer system with, 
 
 1. 100GB HDD/SDD of free hard-disc space.
 
