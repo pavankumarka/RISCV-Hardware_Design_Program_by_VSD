@@ -62,7 +62,7 @@ week1: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree
 
     1.2.1 Calculate 1's and 2's compliment for signed numbers (3 problems to be solved in 2 varients).
 
-    1.2.2 Design ALU (Arthimetic and Logic Unit) using C-code and verify it using **gcc compiler**.
+    1.2.2 Design ALU (Arthimetic and Logic Unit) using C-code and verify it using ** gcc compiler **
 
     1.2.3 Design ALU using verilog and verify using iVerilog and gtkwave.
 
