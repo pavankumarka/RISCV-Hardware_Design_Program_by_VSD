@@ -9,7 +9,7 @@ An ALU is Arithematic and Logic Unit, usually used as a module in CPU design. AL
 
   3. Registers
 
-A Simple "Mathematical and Logic" unit of ALU's State Machine like design is described here, implemented using verilog, verified using iverilog compiler, and test bench is written for the same design and simulated using gtkwave tool. Corresponding pictures are added below. 
+A Simple "Mathematical and Logic" unit of ALU's State Machine like design is described here, implemented using verilog, verified using iverilog compiler, and test bench is written for the same design and simulated using gtkwave tool. Corresponding pictures are added below. The output value "aluOut" is a 8bit register, that holds ASCII equivalent HEX value assigned to inputs, based on select lines, the output value is updated. 
 
 **Arithematic and Logic Design**
 
@@ -23,3 +23,7 @@ A Simple "Mathematical and Logic" unit of ALU's State Machine like design is des
 **Output Waveform using GTKWave Tool:**
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/c0f46861-5578-47a3-ac95-0092e8182d4d)
+
+
+**Issues faced during design**
+1. case/switch condition issue. In Verilog code, initial design was written "case (sel0 | sel1)", this never met last 2 conditions though there is place holder in case. "case({sel0,sel1})" was fix provided by instructor to overcome the issue.
