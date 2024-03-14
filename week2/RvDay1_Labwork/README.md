@@ -81,15 +81,15 @@ Topic2: From apps to Hardware
         
         Eg: if hardware is Intel x86, the instrn set follows intel x86 syntax, similarly for MIPS, ARM, RISC-V and so on.
         
-        ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/73ede33e-a822-4709-a6f3-0f0ba81a28ab)
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/73ede33e-a822-4709-a6f3-0f0ba81a28ab)
 
         3. Next step is to take these instruction set file or exe file and convert it into ALP/MLP. This is done by Assembler.
 
-        ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/b4e2e348-031c-45a3-897c-b949ee3470a1)
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/b4e2e348-031c-45a3-897c-b949ee3470a1)
 
         4. These ALP patterns are sequentially feed to harware to get the response from hardware/chipset. 
 
-        ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/9f8823a6-1fa0-4788-bc33-f8af7e66ad9e)
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/9f8823a6-1fa0-4788-bc33-f8af7e66ad9e)
 
 Example: Stopwatch on a RISC-V computer:
 
