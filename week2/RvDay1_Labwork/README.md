@@ -142,11 +142,61 @@ So during this step, there are further intermediate steps:
 
 
 HDP Course highlights:
-1. Start with converting Instruction set into RTL.
+1. Start with converting Instruction set into RTL - ISA. This will be of the highest focus in this course
 2. Convert RTL into Netlist.
 3. Implementation of Physical Design for picorv32 CPU's Netlist/Hardware/Layout. 
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/05fa9755-1be3-4170-bf45-a17d3ed2d97c)
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Topic3: Detail description of course contents for (Part 1a of this course) RISC-V Instruction Set Architecture (ISA) -
+
+**Let us take an example and detail the course contents:**
+
+Example: Here is the screenshot of a C-code that does Integer Addition in one program, and Integer multiplication and division in another program, usually this logic is used in calculators on our computers. 
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/f8f1e4a2-1ca2-4eb8-ace4-f373e78bb38e)
+
+1. If the C-programs above are compiled into RISC-V instruction set, the assembly code is generated and has **psuedo Instructions**,  like mv, li, rel etc...
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/5356673a-eb56-4850-b519-fd71e805c0f2)
+
+2. Next is the **Base Integer instructions** : Nomeniclature used to define BII is RV64I/RV32I i.e RISCV 64/32bit Instructions. 
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/bc29c17c-9f3e-4221-8b46-f3efbe0cf03d)
+
+3. Multiplication and division type of operations are covered under special Instruction set, called **Multiply Extension RV64M**
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/7fffe688-6d96-4aee-83c6-56116ad0340d)
+
+Note: If a RV supports both I and M types, then it is said to be RV64IM / RV32IM type processor.
+
+4. Single and Double Precision Floating Point Extension Instruction set is covered under **RV64F and RV64D**
+
+   RV64F/RV32F : flw, fadd, fcvt, fmv, fsc
+
+   RV64D/RV32F : dlw, dadd, cvt, ld
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/71c87af7-ac25-49e8-b06b-9f8aeced1195)
+
+Note: If a RV supports both I, M, F and D types, then it is said to be RV64IMFD / RV32IMFD type processor.
+
+5. ABI - Application Binary Interface:
+
+    a0, a1, a5, sp, s0, s1, ra, fa5, fs0.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/473ce2f2-c329-4c72-96c2-0af50dcc4375)
+
+6. Memory allocation and Stack Pointer:
+
+There are certain points/ places where there is transaction of data between registers and memory or vice-versa, an between memory to memory and how values been stored in registers, this concepts are covered under Memory allocation and SP. we will also cover how memory is allocated to each instruction, concepts of Stack Pointer and how SP moves up in the stack. 
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/8f00364d-c9db-460d-9fc9-89f39cd76d6e)
+
+7. Representation of signed and unsigned integers on a 64bit RV CPU.
+
+---------------------------------------------------------------------------------------------------------------------------------
 
 
 
