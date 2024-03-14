@@ -1,6 +1,9 @@
 **RV Day 1 - Introduction to RISC-V Instruction Set Architecture and GNU compiler toolchain**
 
     Chapter1: Introduction to RISC-V Keywords
+            Topic1: Introduction to RISC-V ISA
+            Topic2: From apps to Hardware
+            Topic3: Detail description of course content
 
     Chapter2: Labwork for RISC-V software toolchain
 
@@ -10,18 +13,21 @@
 
 **Chapter1: Introduction to RISC-V Keywords**
 
+Topic1: Introduction to RISC-V ISA
+
 Top Level description for RISC-V ISA: 
     It is abbrevated form of Reduced Instruction Set Computer for type V(Roman 5) Instruction Set Architecture, is the language of the computer or the way we talk to computers.
 
+Further step down to learn RISC-V ISA: 
 
-Deepdive to RISC-V ISA: 
-
-In-Short:
+In-Short: What is RISC-V ISA in short? 
     
     C-Program ----> Assembly Language Program ----> Binary Language Program ----> HDL using RTL specification ---> Layout / PNR.
 
 
-To run a simple C or any anyother high-level language like C++/Java on a hardware layout (let us say our laptop CPU/chipset), there are certain steps followed:
+Detail description of RISC-V ISA:
+
+To run a simple C or any anyother high-level language like C++/Java on a hardware layout (let us say our laptop CPU/chipset), there are certain steps to be followed:
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/3bb2fb78-cabc-4329-8e9b-1fc809a84e94)
 
@@ -44,5 +50,7 @@ To run a simple C or any anyother high-level language like C++/Java on a hardwar
   5. Final stage is RTL to Layout / RTL to PNR/GDSII following CPU architecture specification. 
 
 -----------------------------------------------------------------------------------------------------------------------------------
-     
+
+
+
 
