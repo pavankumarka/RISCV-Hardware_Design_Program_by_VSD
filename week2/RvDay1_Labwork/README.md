@@ -62,9 +62,73 @@ Topic2: From apps to Hardware
 
 --> Application software enters into a system called System software. The System software intern converts application into Binary langauage.
         There are varies levels of system software,
+
         1. Operation System (OS)
+        
         2. Compiler
+        
         3. Assembler
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/a72389f7-1eed-4dbf-bd08-8c7675ce427c)
+
+--> What does Operation System (OS) do? 
+        It handles I/O operations, allocates memory, low level system functions, like converts app into ALP and BLP/MLP later. 
+
+--> How does OS work?
+        1. OS takes apps written in high level language and converts into small functions in C, Cpp, Java, VB.
+        2. It takes these small functions as inputs into Compiler and converts into instructions in a output file called *.exe.
+        The syntax of the instructions follows or depends upon core/hardware.
+        
+        Eg: if hardware is Intel x86, the instrn set follows intel x86 syntax, similarly for MIPS, ARM, RISC-V and so on.
+        
+        ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/73ede33e-a822-4709-a6f3-0f0ba81a28ab)
+
+        3. Next step is to take these instruction set file or exe file and convert it into ALP/MLP. This is done by Assembler.
+
+        ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/b4e2e348-031c-45a3-897c-b949ee3470a1)
+
+        4. These ALP patterns are sequentially feed to harware to get the response from hardware/chipset. 
+
+        ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/9f8823a6-1fa0-4788-bc33-f8af7e66ad9e)
+
+Example: Stopwatch on a RISC-V computer:
+
+1. First the Stopwatch app code is converted into smaller C like high level language 
+
+2. Using Compiler, the C like high level language is converted into RISC-V Instructions in a exe file.
+
+3. This *.exe file is taken into Assembler and converted into Machine / Assembly Language Program.
+
+4. The ALP is feed to RISC-V computer for corresponding output.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/4994d1c6-85d8-4e48-bbc0-7bbad6d91e64)
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+Next step is to get deeper into ISA functionality:  
+
+**NOTE: FOCUS More HERE ---> this is the core of this course.**
+
+1. i.e what happens in the instruction set after converting the C-code into Instruction set?
+   
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/08161559-6cee-497e-9212-90a6f74bac07)
+
+----> we will get deep into instruction set from here after. The instruction set acts like a abstract layer or interface between the c-program and the hardware.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/5f479985-7646-4df9-9173-114e441816a3)
+
+
+
+
+
+
+
+
+
+
+        
+
+
 
 
 
