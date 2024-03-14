@@ -87,7 +87,7 @@ Topic2: From apps to Hardware
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/b4e2e348-031c-45a3-897c-b949ee3470a1)
 
-        4. These ALP patterns are sequentially feed to harware to get the response from hardware/chipset. 
+        4. These ALP patterns are sequentially feed to hardware to get the response from hardware/chipset. 
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/9f8823a6-1fa0-4788-bc33-f8af7e66ad9e)
 
