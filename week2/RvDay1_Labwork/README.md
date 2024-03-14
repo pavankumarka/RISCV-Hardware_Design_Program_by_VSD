@@ -113,9 +113,43 @@ Next step is to get deeper into ISA functionality:
    
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/08161559-6cee-497e-9212-90a6f74bac07)
 
-----> we will get deep into instruction set from here after. The instruction set acts like a abstract layer or interface between the c-program and the hardware.
+----> we will get deep into instruction set from here after. The instruction set acts like a abstract layer or interface between the c-program and the hardware. **This abstract layer is nothing but the ISA, which represents the hardware.**
+----> it is nothing but the architecture of the laptop CPU. In this course it will be **architecture of RISC-V computer.**
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/5f479985-7646-4df9-9173-114e441816a3)
+
+---> There is more to do in the ISA. If we further look deeper, Hardware understands only 0's and 1's combination. So before Instrn set converts into Assembly Language, there is one more step to cover, that is nothing but RTL, which is written in HDL (verilog or VHDL). 
+        Eg: add x6, x10, x6 is eqivalent to the 000000......0011 in binary. this is what hardware unerstands.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/cff04dea-8043-48f5-83cd-589a115ca356)
+
+---> Let us use the same Example: 
+
+"add x6, x10, x6" meaning add 2 register x6 and x10 an store the result back in x6 register is the hardware interpretation by looking into binary Language. 
+
+---> now we know instruction set is output of the compiler and the binary format is the output of the assember, now we need a hardware or an RTL Description Language which implements the required instruction set.
+
+So during this step, there are further intermediate steps:
+
+1. High Level: convert Instruction set into RTL implentation, which understands the Instructions set, this is called RTL implentation.
+
+2. Low Level:
+       2.1 This RTL is Synthesized into Netlist of RISC-V Hardware. Netlist is combination of gates (AND, OR, NOR, FF .. etc)
+
+       2.2 RLT to Layout is covered in "Physical Design implementation of Netlist" step.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/de271151-b40e-4192-b9dd-08acc460248c)
+
+
+HDP Course highlights:
+1. Start with converting Instruction set into RTL.
+2. Convert RTL into Netlist.
+3. Implementation of Physical Design for picorv32 CPU's Netlist/Hardware/Layout. 
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/05fa9755-1be3-4170-bf45-a17d3ed2d97c)
+
+
+
 
 
 
