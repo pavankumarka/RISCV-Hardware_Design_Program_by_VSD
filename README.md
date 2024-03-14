@@ -5,6 +5,9 @@ oriented workshop course, for Hardware-Software Co-simulation focused product de
 
 Link: https://www.vlsisystemdesign.com/hdp_riscv/ 
 
+**Credits**
+
+All slides, materials, codes, notes used in this repo belongs to VSD team.
 
 **Instructors:**
 
