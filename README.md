@@ -67,7 +67,7 @@ week1: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree
     1.2.3 Design ALU using verilog and verify using iVerilog and gtkwave.
 
 
-week2:
+week2: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree/main/week2 
 
    Labwork1: RV Day 1 - Introduction to RISC-V Instruction Set Architecture and GNU compiler toolchain
    
