@@ -192,16 +192,12 @@ We will start from LSB to fill lui register,
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/023f1202-0b7d-4962-bd92-1857df705e27)
 
+ ---> here the instruction is "addi sp, sp, -48".
+ ---> here with add immediate instruction, sp initial value is added with -48 (0x30) and the result is stored back to sp register. 
+ val2 = val1 + (-0x30)
+ 0x0000003ffffffb10 = 0x0000003ffffffb40 - 0x30.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/edf29934-11c1-4143-a50e-7be673b9e5ed)
+
+We will visit back here with MCQ's from Eximination section to learn explore more about instructions.
 -----------------------------------------------------------------------------------------------------------------
-
-
-
-
- 
-    
-
-
-
- 
-
-
