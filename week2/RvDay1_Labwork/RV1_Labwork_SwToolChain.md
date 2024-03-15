@@ -121,9 +121,16 @@ Note: both o1 and ofast type flags enabled output files (*.o) are of same size, 
 ---> The number of instructions in -O1 and -Ofast are 26 and 24 respectively.
 
 ---> common and differences in instructions are noted here.
+      1. In O1 disassemble, instructions like "li s0,1" is used, where as in Ofast it is "li s0, 2"
+      
+      2. In O1 disassemble, instructions like "addiw a5, s0, 1" is used, where as in Ofast it is "addw s1,s1 s0".
+      3. in O1 disassemble, could see extra 2 commands marked in red as below.
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/0eb82c43-321c-476a-a31f-eb55b7cdc194)
 
----------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+
+
 
 
  
