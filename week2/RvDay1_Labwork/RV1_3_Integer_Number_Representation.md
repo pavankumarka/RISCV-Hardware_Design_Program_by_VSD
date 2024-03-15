@@ -1,2 +1,16 @@
 **Integer number representation**
 
+Agenda:
+
+    Topic1: 64bit Number system for unsigned Numbers.
+    Topic2: 64bit Number system for signed Numbers.
+    Topic3: Lab for Signed and unsigned numbers.
+
+------------------------------------------------------------------------------------------------------------------
+Topic1: 64bit Number system for unsigned Numbers.
+------------------------------------------------------------------------------------------------------------------
+Topic2: 64bit Number system for signed Numbers.
+------------------------------------------------------------------------------------------------------------------
+Topic3: Lab for Signed and unsigned numbers.
+------------------------------------------------------------------------------------------------------------------
+
