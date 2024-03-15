@@ -81,6 +81,15 @@ verification Steps:
    ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/fdda7a05-a11b-4075-a535-6b7bb742a0f0)
 
 ----------------------------------------------------------------------------------------------------------------------------------
-   
+
+To play around with the same problem, we shall increment the N value and print intermitently,
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/90ad3e17-89f8-41d6-be97-81bf9d3ab4b3)
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 
