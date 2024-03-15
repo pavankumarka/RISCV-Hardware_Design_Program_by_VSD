@@ -97,6 +97,12 @@ Command to generate assembly file with debugger logs enabled: $gcc -g -c -S *.c 
 
 
 ----------------------------------------------------------------------------------------------------------------------------------
+Binary size differences: the binary size increases as the debug logs enabled in assembly and output/exe files, those can be observed below
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/d92b2bd9-8afd-4940-a657-94b82226909f)
+
+
+----------------------------------------------------------------------------------------------------------------------------------
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
