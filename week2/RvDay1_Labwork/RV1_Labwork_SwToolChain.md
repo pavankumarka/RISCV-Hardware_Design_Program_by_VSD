@@ -99,14 +99,26 @@ Command to generate assembly file with debugger logs enabled: $gcc -g -c -S *.c 
 ----------------------------------------------------------------------------------------------------------------------------------
 Binary size differences: the binary size increases as the debug logs enabled in assembly and output/exe files, those can be observed below
 
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/d92b2bd9-8afd-4940-a657-94b82226909f)
-
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/c6f3dff8-d04d-46b3-8ff5-1be76053c84a)
 
 ----------------------------------------------------------------------------------------------------------------------------------
-
+NOTE: To run *.out files locally, one has to have installed gcc for x86 and RISC-V compiler and debuggers like gdb / spike.
 ----------------------------------------------------------------------------------------------------------------------------------
 
  **2. RISCV GCC compile and disassamble**
+
+1. Compile RV gcc for o1 and ofast for the given C-Program, and notedown the differences.
+2. Disassemble RV gcc for o1 and ofast for the given C-program, and notedown the differences.
+
+Commands used to compile using RV gcc, disassemble using objdump for RV CPU and pipe them to corresponding file's are shown below:
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/cc163ca8-8926-4dc6-b3b3-8fba67f3ca8a)
+
+File size differnces are captured here: 
+
+Note: both o1 and ofast type flags enabled output files (*.o) are of same size, but the disassemble files (*.s) have diffence
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/7041eb66-0dd3-4b71-a5ba-627b19dbf767)
+
 
  
 
