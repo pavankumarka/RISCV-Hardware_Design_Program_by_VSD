@@ -2,6 +2,8 @@
 
 **Labwork1: RV Day 1 - Introduction to RISC-V Instruction Set Architecture and GNU compiler toolchain**
 
+https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree/main/week2/RvDay1_Labwork
+
         Chapter1: Introduction to RISC-V Keywords
 
         Chapter2: Labwork for RISC-V software toolchain
