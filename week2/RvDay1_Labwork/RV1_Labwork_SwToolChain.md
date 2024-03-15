@@ -112,12 +112,18 @@ NOTE: To run *.out files locally, one has to have installed gcc for x86 and RISC
 
 Commands used to compile using RV gcc, disassemble using objdump for RV CPU and pipe them to corresponding file's are shown below:
 
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/cc163ca8-8926-4dc6-b3b3-8fba67f3ca8a)
-
 File size differnces are captured here: 
 
-Note: both o1 and ofast type flags enabled output files (*.o) are of same size, but the disassemble files (*.s) have diffence
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/7041eb66-0dd3-4b71-a5ba-627b19dbf767)
+Note: both o1 and ofast type flags enabled output files (*.o) are of same size, but the disassemble files (*.s) have difference size
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/d2c0096d-afea-4748-abb5-f2a5c53f035f)
+
+---> The number of instructions in -O1 and -Ofast are 26 and 24 respectively.
+
+---> common and differences in instructions are noted here.
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/0eb82c43-321c-476a-a31f-eb55b7cdc194)
+
+---------------------------------------------------------------------------------------------------------------
 
 
  
