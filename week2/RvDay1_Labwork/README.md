@@ -16,6 +16,10 @@ https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/w
             Topic3: Spike simulation and debug
 
 Chapter3: Integer number representation.
-            Topic1: 
+https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay1_Labwork/RV1_3_Integer_Number_Representation.md
+
+            Topic1: 64bit Number system for unsigned Numbers.
+            Topic2: 64bit Number system for signed Numbers.
+            Topic3: Lab for Signed and unsigned numbers.
 
 ---------------------------------------------------------------------------------------------------------------------------------
