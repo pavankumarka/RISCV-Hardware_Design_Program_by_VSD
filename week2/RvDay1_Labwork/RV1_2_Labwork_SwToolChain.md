@@ -188,6 +188,10 @@ We will start from LSB to fill lui register,
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/bed320a9-f884-4e21-93d6-62fa4d08ceaa)
 
+4. we will investigate "sp" register value in following section
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/023f1202-0b7d-4962-bd92-1857df705e27)
+
 -----------------------------------------------------------------------------------------------------------------
 
 
