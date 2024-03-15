@@ -152,6 +152,46 @@ Let us execute above commands for "sumOf1ToN_RV_gcc.o" generated for RISCV CPU u
 
 The output should remain same for both -O1 and -Ofast, we will deepdive further about them later in the course.
 
+----> Now we know the verification of the RV output file is fine using loader, an our initial dryrun steps or by matching x86 gcc output, we will concentrate next section to debug for RISCV computer. For this,
+   1. either we shall use same *.o file to debug.
+      or
+   3. we can introduce a bug and catch it in debugger, fix it.
+
+For now we will follow 1st step.
+
+1. First we should know the starting address of the main() to debug further.
+   This we will learn by visiting *.s (disassemble) file generated using "riscv64 objdump" command.
+2. Point the Program counter (PC) to starting address of the main() function.
+   ---> :until pc 0 <start_address_of_main>
+3. After we know the debug point have reached data objects/variables are declared and defined, we will learn there initial values by printing the register values.
+   ---> :reg 0 a2
+   ---> :reg 0 sp
+
+
+
+4. There are certain registers and values we get when step / increment the instructions, we will see the details in later section of the course.
+    ---> At this stage, for understanding purpose, we will introduce and explore what is "lui" instructions we see during debug.
+
+--> What are the contents of lui register ?
+   => lui is Load Upper Immediate Register which is 32bit wide. 
+   => From LSB, the first 7 bits (0th bit to 6th bit) are opcode
+   => from LSB, after opcode, the next 5bits (7th bit to 11th bit) belongs to specify destination register (rd). 
+   => After rd bytes, the remaining 20bits (from 12th bit to 31st bit) are data. 
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/a53beba4-1b44-4753-bedf-31152521af64)
+
+Eg: from screenshot below, we see 0x00000000**00021000** to be loaded for s3 register using lui instruction.
+
+We will start from LSB to fill lui register, 
+   1. 1st value "0" is stored in bits 0 to 3.
+   2. 2nd value "0" is stored in bits 4 to 7.
+   3. 3rd value "0" is stored in bits 8 to 11.
+   4. 4th value "0x00021" is stored in bits 12 to 31.
+   5. rest value "0x00000000" is appended because the CPU is 64bit
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/074b82f8-09d1-4999-8c78-41974a5a3e58)
+
+
+
 
 
  
