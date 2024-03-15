@@ -112,7 +112,12 @@ NOTE: To run *.out files locally, one has to have installed gcc for x86 and RISC
 
 Commands used to compile using RV gcc, disassemble using objdump for RV CPU and pipe them to corresponding file's are shown below:
 
-File size differnces are captured here: 
+1. riscv64-unknown-elf-gcc -O1 -mabi=lp64 -march=rv64i -o 5_sumOf1ToN_RvO1_gcc.o 0_sumOf1ToN.c
+2. riscv64-unknown-elf-objdump -d 5_sumOf1ToN_RvO1_gcc.o > 6_sumOf1ToN_RvO1_obdump.s
+3. riscv64-unknown-elf-gcc -Ofast -mabi=lp64 -march=rv64i -o 7_sumOf1ToN_RvOfast_gcc.o 0_sumOf1ToN.c
+4. riscv64-unknown-elf-objdump -d 7_sumOf1ToN_RvOfast_gcc.o > 8_sumOf1ToN_RvOfast_obdump.s
+
+File size differences are captured here: 
 
 Note: both O1 (Uppercase 'O' appeneded with digit '1') and Ofast ('O' appended with 'fast') type flags enabled output files (*.o) are of same size, but the disassemble files (*.s) have difference size
 
@@ -120,16 +125,37 @@ Note: both O1 (Uppercase 'O' appeneded with digit '1') and Ofast ('O' appended w
 
 ---> The number of instructions in -O1 and -Ofast are 26 and 24 respectively.
 
----> common and differences in instructions are noted here.
+---> instructions related observations are noted here.
       1. In O1 disassemble, instructions like "li s0,1" is used, where as in Ofast it is "li s0, 2"
-      
       2. In O1 disassemble, instructions like "addiw a5, s0, 1" is used, where as in Ofast it is "addw s1,s1 s0".
       3. in O1 disassemble, could see extra 2 commands marked in red as below.
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/0eb82c43-321c-476a-a31f-eb55b7cdc194)
 
 --------------------------------------------------------------------------------------------------------------
+ **3. Spike simulation and Debug**
 
+In this section we will explore cross-platform tool for following requirments, 
+ 1. On x86 machine, how to run programs compiled for RISC-V?
+
+ 2. On x86 machine, how to debug programs compiled for RISC-V?
+
+---> The one liner is using **spike tool**, using following linux commands,
+
+$ spike pk *.o     // command used for executing the RV compiled *.exe / *.o file.
+
+$ spike -d pk *.o   // command used for debugging the RV executable (*.o) using spike tool on x86  
+
+Let us execute above commands for "sumOf1ToN_RV_gcc.o" generated for RISCV CPU using riscv64 gcc tool.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/18623935-c04e-484d-a140-637c61f44b59)
+
+The output should remain same for both -O1 and -Ofast, we will deepdive further about them later in the course.
+
+
+
+ 
+    
 
 
 
