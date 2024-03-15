@@ -167,8 +167,6 @@ For now we will follow 1st step.
    ---> :reg 0 a2
    ---> :reg 0 sp
 
-
-
 4. There are certain registers and values we get when step / increment the instructions, we will see the details in later section of the course.
     ---> At this stage, for understanding purpose, we will introduce and explore what is "lui" instructions we see during debug.
 
@@ -188,8 +186,9 @@ We will start from LSB to fill lui register,
    4. 4th value "0x00021" is stored in bits 12 to 31.
    5. rest value "0x00000000" is appended because the CPU is 64bit
 
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/074b82f8-09d1-4999-8c78-41974a5a3e58)
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/bed320a9-f884-4e21-93d6-62fa4d08ceaa)
 
+-----------------------------------------------------------------------------------------------------------------
 
 
 
