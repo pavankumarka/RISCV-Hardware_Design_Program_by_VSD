@@ -82,14 +82,26 @@ verification Steps:
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-To play around with the same problem, we shall increment the N value and print intermitently,
+To play around with the same problem, we shall increment the N value to 100 and print intermitently,
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/90ad3e17-89f8-41d6-be97-81bf9d3ab4b3)
 
 ----------------------------------------------------------------------------------------------------------------------------------
+DIfference between "assembly file for c-program without enabling debugger flag" and "assembly file for c-program with debugger flag enabled" is captured below, we can observe that there are more debug information added in each stage which will help to print the intermin result during debug.
+
+Command to generate assembly file without debugger enabled: $gcc -c -S *.c -o *_x86.s
+
+Command to generate assembly file with debugger logs enabled: $gcc -g -c -S *.c -o *_x86_gdb.s
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/ca7cb901-58b9-4566-b3aa-d49afbc382b3)
 
 
+----------------------------------------------------------------------------------------------------------------------------------
 
+----------------------------------------------------------------------------------------------------------------------------------
 
+ **2. RISCV GCC compile and disassamble**
+
+ 
 
 
