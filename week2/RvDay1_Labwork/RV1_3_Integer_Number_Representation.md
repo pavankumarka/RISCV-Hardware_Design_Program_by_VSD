@@ -44,46 +44,59 @@ In next section we will explore how to represent / store negative numbers?
 Topic2: 64bit Number system for signed Numbers.
 ------------------------------------------------------------------------------------------------------------------
 1. A Positive and negative number represantation on a 64bit RV CPU as below shown in picture.
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/7cade904-e375-4900-adf1-09450b0bb019)
 
 2. Another easy example would be storing +2 and -2,
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/11efff5d-c117-470e-b98e-e3d87978a050)
 
 3. A +ve number MSB is 0 and for -ve number MSB is 1.
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/f621700d-36dd-43d3-9de6-fb946a881701)
 
 4. To find decimal equivalent,
+
    4.1 For Positive number, i.e MSB bit will be 0, for MSB bit multiply by (+2^64)
+
    4.2 For negative number, i.e MSB will be 1, for MSB bit multiply by (-2^63)
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/7f184c57-da2a-465e-a676-520c4478e9cb)
 
-5. Another way to quickly find the -ve number is finding its 2's compliment and add -ve sign at MSB side.
+6. Another way to quickly find the -ve number is finding its 2's compliment and add -ve sign at MSB side.
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/f01d0d11-3830-4f58-ad29-d10fae9247e8)
 
-6. To find the min an max range of positive numbers stored in signe number representation would be, we will have to follow the step of keeping the MSB bit as the place holder for sign bit in case of signed numbers. so the max bits we can use is 63bits to represent a number, keeping MSB bit, the 64th bit for signed number representation.
+7. To find the min an max range of positive numbers stored in signe number representation would be, we will have to follow the step of keeping the MSB bit as the place holder for sign bit in case of signed numbers. so the max bits we can use is 63bits to represent a number, keeping MSB bit, the 64th bit for signed number representation.
+   
    ---> so min number would be (0|all 0's)bin = (0)dec.
+
    ---> and max number would be (0| all 1's)bin = (9,223,372,036,854,775,807)dec. = ((2^63)-1)
 
  ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/68e5320a-3203-4064-b7ed-1a974cdc8ab4)
 
 7. For Negative numbers range, (-1) to (-2^63)bin = (-9,223,372,036,854,775,808)dec.
-Now compare +ve and -ve number using LS byte.
+
+Now compare +ve and -ve number using Least Significant byte.
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/e543a433-9e4f-4c4a-9c30-741f4085069f)
 
 8. To conclude with, the signed and unsigned number support following the rules and limits are called RV64I, in other words, RV supports Base Integer Instructions.
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/878d6ac4-3014-4ec9-9e79-1bb7b9dc9f22)
 
 ------------------------------------------------------------------------------------------------------------------
 Topic3: Lab for Signed and unsigned numbers.
 ------------------------------------------------------------------------------------------------------------------
 1. Unsigned Min - Max support on RV CPU. 
+
 ---> To cover max number support on RV architecture, use "unsigned long long int".
+
 ---> the range we saw +ve numbers is 0 to ((2^64)-1), we will try to print the same using C-program.
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/461464ef-9afc-4d86-8a40-83151fa2cd42)
 
 Note: To avoid warning or malfunctioning on hardware, it is better practice to include type conversion 
+
 Eg: "result = (pow(2,64)-1);" gives warning when compiled without typecasting.
     "result = (unsigned long long int)(pow(2,64)-1);" compiles smooth.
 
@@ -109,7 +122,9 @@ Theoritically it is 0. i.e the min number, an unsigned long long int type variab
 5. Representing Min and Max supported signed type numbers in RISCV CPU.
 
 --> Min signed number = -(2^63); //(-9,223,372,036,854,775,808)dec.
+
 --> Max signed number = (2^63);  //(9,223,372,036,854,775,807)dec.
+
 NOTE: for RV CPU arctitecture to understand the signed numbers, it is better to typecast the required type, else compiler will allocate default datatype to its corresponding datatype's.
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/dad9fccd-cb5f-453a-b264-9dd3cb0d6100)
