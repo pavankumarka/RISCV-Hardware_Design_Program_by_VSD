@@ -108,4 +108,8 @@ Theoritically it is 0. i.e the min number, an unsigned long long int type variab
 
 5. Representing Min and Max supported signed type numbers in RISCV CPU.
 
--->
+--> Min signed number = -(2^63); //(-9,223,372,036,854,775,808)dec.
+--> Max signed number = (2^63);  //(9,223,372,036,854,775,807)dec.
+NOTE: for RV CPU arctitecture to understand the signed numbers, it is better to typecast the required type, else compiler will allocate default datatype to its corresponding datatype's.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/dad9fccd-cb5f-453a-b264-9dd3cb0d6100)
