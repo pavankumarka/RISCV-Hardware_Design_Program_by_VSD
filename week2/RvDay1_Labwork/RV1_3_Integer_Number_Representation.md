@@ -77,4 +77,35 @@ Now compare +ve and -ve number using LS byte.
 ------------------------------------------------------------------------------------------------------------------
 Topic3: Lab for Signed and unsigned numbers.
 ------------------------------------------------------------------------------------------------------------------
+1. Unsigned Min - Max support on RV CPU. 
+---> To cover max number support on RV architecture, use "unsigned long long int".
+---> the range we saw +ve numbers is 0 to ((2^64)-1), we will try to print the same using C-program.
 
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/461464ef-9afc-4d86-8a40-83151fa2cd42)
+
+Note: To avoid warning or malfunctioning on hardware, it is better practice to include type conversion 
+Eg: "result = (pow(2,64)-1);" gives warning when compiled without typecasting.
+    "result = (unsigned long long int)(pow(2,64)-1);" compiles smooth.
+
+2. Even by increasing the power greater than 64, the RV arch can max allocate ((2^64)-1).
+   By Reducing the power value less than 64, the RV supports the value as it is within range of ((2^64)-1).
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/0bb95bd9-06b8-4849-858c-88e404a52e21)
+
+3. The minimum number supported by RISCV architecture is **0**. 
+
+We will try to multiply by (-1) and check the result.
+
+Theoritically it is 0. i.e the min number, an unsigned long long int type variable can support.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/bc8afd98-0289-4b50-9181-8f2e8b4c1bb0)
+
+4. Representing Negative numbers in RISCV CPU.
+
+---> use signed numbers. An example is shown in picture below:
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/a1697a8e-b0bc-48d1-82e7-723f87a6f0d4)
+
+5. Representing Min and Max supported signed type numbers in RISCV CPU.
+
+-->
