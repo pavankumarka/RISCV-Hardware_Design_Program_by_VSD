@@ -134,3 +134,6 @@ NOTE: for RV CPU arctitecture to understand the signed numbers, it is better to 
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/a8ee25a4-6990-4256-ae14-0ddc232f785e)
 
+7. Explore datatype size on RV CPU.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/3e189c23-d4f8-437b-a39f-2a0511fc5888)
