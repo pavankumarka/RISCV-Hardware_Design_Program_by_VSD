@@ -127,10 +127,10 @@ Theoritically it is 0. i.e the min number, an unsigned long long int type variab
 
 NOTE: for RV CPU arctitecture to understand the signed numbers, it is better to typecast the required type, else compiler will allocate default datatype to its corresponding datatype's.
 
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/dad9fccd-cb5f-453a-b264-9dd3cb0d6100)
+
 
 6. Interger Datatypes supported on RV CPU and size of each of those are explained here.
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/a8ee25a4-6990-4256-ae14-0ddc232f785e)
 
-
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/dad9fccd-cb5f-453a-b264-9dd3cb0d6100)
