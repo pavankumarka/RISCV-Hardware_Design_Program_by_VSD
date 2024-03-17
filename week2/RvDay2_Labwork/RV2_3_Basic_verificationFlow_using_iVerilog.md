@@ -9,7 +9,13 @@ Basic Verification Flow using iVerilog.
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/1fb5321e-2df7-456d-be7b-5b6fd40442f9)
 
 ------------------------------------------------------------------------------------------------------------------
---> we will clone the tools and ensure the required files such as RTL for picorv core, its testbench,  a shell script which automats following,
+Link / git command to clone RTL required tools: 
+
+$git clone https://github.com/kunalg123/riscv_workshop_collaterals.git  
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/4e370adf-cd21-4a2d-94dc-d29d5d8e7909)
+
+--> With above link we shall clone the tools and ensure the required files such as RTL for picorv core, its testbench,  a shell script which automats following,
 
   1. compile C-Code for RISC-V RTL and convert it into hex file which will loaded as a memory/firmware file to RTL.
 
