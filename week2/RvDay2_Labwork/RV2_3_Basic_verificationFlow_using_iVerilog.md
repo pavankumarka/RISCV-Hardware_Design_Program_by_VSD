@@ -30,4 +30,17 @@ RESULT:
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/c5fded5c-3d93-4054-a6b5-1fac8a699b02)
 
---------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+
+To conclude,
+
+The firmware.hex file is generated after running the ./rv32im.sh file like this,
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/f076c295-ea2b-406f-910d-329541fcc35f)
+
+The same file rv32im.sh file reads hex file (a c-program compiled for RISCV core ) is read like below inside testbench.v file,
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/eb2c8f36-26f9-415f-8c8e-427a270ffe9a)
+
+
+
