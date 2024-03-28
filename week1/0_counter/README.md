@@ -18,19 +18,19 @@ compiler, later we will focus on rest of the functions
 
 1. main() Program for 4bit counter :
 
-int main()
-{
-	int count = 0x00000000;
-	while (1)
-	{
-		display(count);
-		count++;
-        if(count==16){
-            count=0;
-        }
-		delay(500000);   // delay by 0.5 microseconds
-	}
-}
+			int main()
+			{
+				int count = 0x00000000;
+				while (1)
+				{
+					display(count);
+					count++;
+			        if(count==16){
+			            count=0;
+			        }
+					delay(500000);   // delay by 0.5 microseconds
+				}
+			}
 
 
 Program steps: 
