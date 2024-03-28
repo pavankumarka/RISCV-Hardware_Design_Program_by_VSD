@@ -48,11 +48,11 @@ Program steps:
 
 **In x86 based 64 bit GCC Compiler, the assembly code looks like below,**
 
-main:
-        push    rbp
-        mov     rbp, rsp
-        sub     rsp, 16
-        mov     DWORD PTR [rbp-4], 0
+		main:
+		        push    rbp
+		        mov     rbp, rsp
+		        sub     rsp, 16
+		        mov     DWORD PTR [rbp-4], 0
 
 
 we see instructions like: push, mov, sub. Each of these instructions have further details, those need to be explored,
