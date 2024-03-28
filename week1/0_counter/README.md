@@ -151,4 +151,30 @@ ARM_64bit ASSEMBLY:
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 
+RISCV 32Bit ALP compiler output with details for function main() of 4bit counter program:
+		
+		main:
+		        addi    sp,sp,-16
+		        sw      ra,12(sp)
+		        sw      s0,8(sp)
+		        sw      s1,4(sp)
+		        sw      s2,0(sp)
+		        li      s0,0
+		        li      s2,16
+		        li      s1,499712
+		        addi    s1,s1,288
+
+
+1. addi    sp,sp,-16
+
+2. sw      ra,12(sp)
+3. sw      s0,8(sp)
+4. sw      s1,4(sp)
+5. sw      s2,0(sp)
+
+6. li      s0,0
+7. li      s2,16
+8. li      s1,499712
+9. addi    s1,s1,288
+
 
