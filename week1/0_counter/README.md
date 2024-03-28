@@ -118,12 +118,12 @@ These instructions looks like 64bit wide, we shall see further details by explor
 
 ARM_64bit ASSEMBLY:
 
-main:
-        push    {r7, lr}
-        sub     sp, sp, #8
-        add     r7, sp, #0
-        movs    r3, #0
-        str     r3, [r7, #4]
+		main:
+		        push    {r7, lr}
+		        sub     sp, sp, #8
+		        add     r7, sp, #0
+		        movs    r3, #0
+		        str     r3, [r7, #4]
 
 
 1. push   {r7, lr}
