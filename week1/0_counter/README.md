@@ -5,6 +5,7 @@ Image illustrating Assembly language program comparison between RISCV compiler f
 -----------------------------------------------------------------------------------------------------------------------------
 
 Response during 4bit counter execution:
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/290a9496-4a44-4c1d-937b-78babf8fe3e9)
 
 
