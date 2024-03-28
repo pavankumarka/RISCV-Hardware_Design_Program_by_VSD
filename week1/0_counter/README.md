@@ -9,7 +9,7 @@ Response during 4bit counter execution:
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/290a9496-4a44-4c1d-937b-78babf8fe3e9)
 
 
-For 4bit Counter program, 
+**For 4bit Counter program:** 
 
 In main function, our aim is to display the count till 16 from 0, after waiting for some delay and incrementing the count value by 1.
 
@@ -69,3 +69,86 @@ current stack frame, and rsp is the stack pointer, which points to the top of th
 
 4. mov     DWORD PTR [rbp-4], 0
 -->  Here in this instruction, it is setting the memory at address rbp - 4 to 0. [rbp - 4] IS our local variable 'count'. The computer doesn’t actually know the name of the variable we use in our code, it simply refers to memory addresses on the stack.
+
+
+Further details here: 
+
+https://blog.holbertonschool.com/hack-virtual-memory-stack-registers-assembly-code/ 
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+
+Now, let us see the **AVR microcrontroller, aka 'Advanced Virtual RISC**' microcontroller instruction set, used to write ASM code for main() function of 4bit Counter program.  
+		
+		main:
+		        push r28
+		        push r29
+		        rcall .
+		        in r28,__SP_L__
+		        in r29,__SP_H__
+		.L__stack_usage = 4
+		        std Y+2,__zero_reg__
+		        std Y+1,__zero_reg__
+				
+
+Link: https://gcc.gnu.org/wiki/avr-gcc 
+
+These instructions looks like 64bit wide, we shall see further details by exploring each instruction in above snippet.
+
+1. push r28
+
+2. push r29
+
+--> push old Frame pointer values in r28 and r29 register. (AVR temporary registers)
+
+3. rcall .
+  
+--> '.' means current value of program counter, is a smart way of pushing 2 bytes onto the stack.
+
+4. in r28,__SP_L__
+   
+5. in r29,__SP_H__
+
+--> Stack Pointer is 64bit wide double word register, r28 and r29 are copied into lower Word and higher word respectively.
+
+6. __zero_reg__
+
+--> Register r1, always zero. further details to be explored.
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+ARM_64bit ASSEMBLY:
+
+main:
+        push    {r7, lr}
+        sub     sp, sp, #8
+        add     r7, sp, #0
+        movs    r3, #0
+        str     r3, [r7, #4]
+
+
+1. push   {r7, lr}
+
+   -->  (lr) Link register, storing the address to return to when the function is done.
+
+   --> r7 is the register, which will have lr/address to return value.
+
+2. sub    sp, sp, #8
+
+   --> subtracts the constant value 0x08 from the stack pointer, and updates the stack pointer with the new result.
+
+3. add    r7, sp, #0
+
+   -->  add the constant value 0x00 from the stack pointer, and updates the r7 register with the new result.
+
+4. movs r3, #0
+
+   --> The MOVS instruction is used to copy a data item (byte, word or doubleword) from the source string to the destination string,
+   also updates the N and Z flags
+
+5. str     r3, [r7, #4]
+
+   -->  Store 4Bytes, ; Register Indirect with pre-indexed MEM[R7+4] ? R3
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
