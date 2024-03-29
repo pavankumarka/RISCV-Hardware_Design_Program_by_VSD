@@ -36,12 +36,12 @@ Assembler Comparison wrt instuction set using Gotbolt compiler:
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-**Instructions seen in 32bit and 64bit RISC-V ISA are below which uses following registers**
+**Instructions seen in 32bit and 64bit RISC-V ISA for Matrix multiplication program are listed below, which uses following registers**
 
 Registers: sp, ra, s0, a1 - a5, zero.
 
 
-Instructions:
+**Instructions:**
 
 1. add
 
@@ -323,7 +323,7 @@ This instruction pushes the current value of the EAX register onto the stack.
 This instruction pushes the value 10 onto the stack.
 
 3. Push a Memory Location onto the Stack:
-      PUSH DWORD [my_variable]   ; Push the value at memory location my_variable onto the
+      PUSH DWORD [my_variable]   ; Push the value at memory location my_variable onto the stack.
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
