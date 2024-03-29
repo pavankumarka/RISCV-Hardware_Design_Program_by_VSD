@@ -57,6 +57,8 @@ Eg1: ADD x3, x1, x2
 
       This instruction will add the contents of registers x1 and x2, and store the result in register x3.
 
+-------------------------------------------------------------------------------------------------------------
+
 2. addi
 
 --> "ADD" and "ADDI" are both instructions for addition, but they have different purposes and operate on different types of operands.
@@ -72,10 +74,14 @@ Eg1: ADDI x3, x1, 10
 
 This instruction will add the immediate value 10 to the contents of register x1, and store the result in register x3.
 
+-------------------------------------------------------------------------------------------------------------
+
 3. call
 
 --> In RISC-V, the CALL instruction is not a standard instruction in the base ISA (Instruction Set Architecture). 
 However, you can create a function call that performs a specific action, such as getting the current time
+
+-------------------------------------------------------------------------------------------------------------
 
 4. j
 
@@ -93,6 +99,8 @@ Where:
             rd: is the destination register where the return address will be stored.
             target: is the immediate target address.
 
+-------------------------------------------------------------------------------------------------------------
+
 5. lui
 
 --> In the RISC-V ISA (Instruction Set Architecture), the LUI (Load Upper Immediate) instruction is used to set the upper 20 bits of a 32-bit register to an immediate value. It is often used to construct 32-bit constants or addresses that need to be loaded into a register.
@@ -105,6 +113,7 @@ rd: is the destination register where the result will be stored.
 
 immediate: is a 20-bit immediate value. This value is shifted left by 12 bits, and the lower 12 bits are set to zero.
 
+-------------------------------------------------------------------------------------------------------------
 
 6. lw
 
@@ -123,6 +132,7 @@ Where:
       
       rs1: is the base register containing the base address from which to load the word.
 
+-------------------------------------------------------------------------------------------------------------
 
 7. slli
 
@@ -156,7 +166,9 @@ Bits [19:15]: Source register (rs1)
 Bits [14:12]: Function (always 0b001 for SLLI)
 Bits [11:7]: Shift amount (shamt)
 Bits [6:0]: Function (always 0b0000000)
-   
+
+-------------------------------------------------------------------------------------------------------------
+
 8. sw
 
 In RISC-V, the SW (Store Word) instruction is used to store a 32-bit word from a register into memory.
@@ -186,11 +198,27 @@ rbp, rsp, edi, eax, ecx, edx, rax, rdx
 Details about instructions: 
 
 1. call
+
+--> In x86 assembly language, the CALL instruction is used to call a subroutine or function. 
+When the CALL instruction is executed, it pushes the return address onto the stack and transfers control to the specified subroutine.
+
+--> The CALL instruction is used to transfer control to a subroutine or function in x86 assembly.
+
+--> The return address is pushed onto the stack before jumping to the subroutine.
+
+--> The RET instruction is used in the subroutine to return control to the instruction following the CALL instruction.
+
+-------------------------------------------------------------------------------------------------------------
 2. cdqe
+-------------------------------------------------------------------------------------------------------------
 3. jmp
+-------------------------------------------------------------------------------------------------------------
 4. mov
+-------------------------------------------------------------------------------------------------------------
 5. movsx
+-------------------------------------------------------------------------------------------------------------
 6. sub
+-------------------------------------------------------------------------------------------------------------
 7. push
 
 ------------------------------------------------------------------------------------------------------------------------------------------
