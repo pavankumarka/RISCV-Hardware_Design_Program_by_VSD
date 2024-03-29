@@ -167,14 +167,56 @@ RISCV 32Bit ALP compiler output with details for function main() of 4bit counter
 
 1. addi    sp,sp,-16
 
-2. sw      ra,12(sp)
-3. sw      s0,8(sp)
-4. sw      s1,4(sp)
-5. sw      s2,0(sp)
+   --> allocate 16Bytes from the stack.
 
-6. li      s0,0
-7. li      s2,16
-8. li      s1,499712
-9. addi    s1,s1,288
+3. sw      ra,12(sp)
 
+   --> Since making calls to other functions, need to copy original ra. 
+   
+5. sw      s0,8(sp)
 
+   --> Since making calls to other functions, need to copy original s0.
+    
+7. sw      s1,4(sp)
+
+   --> since making calls to other functions, need to copy s1.
+   
+9. sw      s2,0(sp)
+
+   --> since making calls to other functions, need to copy s0.
+
+11. li      s0,0
+
+   --> load immediate 0 to s0 register
+
+13. li      s2,16
+
+    --> load immediate 16 to s2 register
+    
+14. li      s1,499712
+
+    --> load immediate 499712 to s1 register
+    
+15. addi    s1,s1,288
+
+    --> add s1 with 288 and update/store the new value in s1 register.
+    
+---------------------------------------------------------------------------------------------------------------------------------------
+To conclude:
+
+Each of the Microcontroller assembly has variations in instruction set and its oucome based upon 
+	1. Number of bits support,
+	2. keywords used for instructions name,
+	3. registers name,
+	4. special registers name,
+	5. clock frequency,
+	6. clock cycle period,
+	7. clock cycle required for each instructions,
+	8. how many instructions per clock cycle,
+	9. pipeline available in architecture,
+	10. free registers available on CPU,
+	11. CPU overloaded?
+	12. stack size.
+
+ We will focus more of the calling functions, instructions set used and further details later int he course.
+     
