@@ -1,7 +1,10 @@
+In this page, we will explore the details of the Counter program and its Assembly Language differences wrt different Microcontroller compiler output.
+
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/f2383670-e297-4933-8d76-4f5d6a01ab7e)
 
 
-Image illustrating Assembly language program comparison between RISCV compiler for (32 bit ) with AVR, ARM and x86 compiler.
+Image above illustrating Assembly language program comparison between RISCV compiler for (32 bit) with AVR, ARM and x86 compiler.
 -----------------------------------------------------------------------------------------------------------------------------
 
 Response during 4bit counter execution:
@@ -11,10 +14,9 @@ Response during 4bit counter execution:
 
 **For 4bit Counter program:** 
 
-In main function, our aim is to display the count till 16 from 0, after waiting for some delay and incrementing the count value by 1.
+In 4bit counter's main function, our aim is to display the count till 16 from 0, after waiting for some delay and incrementing the count value by 1.
 
-At this stage, we will see details of the assembly program by comparing the main() program of the different instruction set Assembly program obtained using gotbolt
-compiler, later we will focus on rest of the functions
+At this stage, we will see details of the assembly program by comparing the main() program of the different instruction set Assembly program obtained using gotbolt compiler, later we will focus on rest of the functions.
 
 1. main() Program for 4bit counter :
 
@@ -45,6 +47,7 @@ Program steps:
 
 5. A delay of 0.5msec is maintained between incrementing count value and display the count value in stdout.  
 
+--------------------------------------------------------------------------------------------------------------------------------------------
 
 **In x86 based 64 bit GCC Compiler, the assembly code looks like below,**
 
@@ -219,5 +222,5 @@ Each of the Microcontroller assembly has variations in instruction set and its o
 	11. CPU overloaded?
 	12. stack size.
 
- We will focus more of the calling functions, instructions set used and further details later int he course.
-     
+ We will focus more about of the calling functions from main(), its instructions set and further details later in the course.
+At this stage we can see there are different instructions used in different microcontoller.
