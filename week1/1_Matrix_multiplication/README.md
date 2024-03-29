@@ -160,12 +160,12 @@ In this example:
 
 The SLLI instruction in RISC-V is encoded as follows:
 
-Bits [31:25]: Opcode (always 0b0010011 for arithmetic instructions)
-Bits [24:20]: Destination register (rd)
-Bits [19:15]: Source register (rs1)
-Bits [14:12]: Function (always 0b001 for SLLI)
-Bits [11:7]: Shift amount (shamt)
-Bits [6:0]: Function (always 0b0000000)
+            Bits [31:25]: Opcode (always 0b0010011 for arithmetic instructions)
+            Bits [24:20]: Destination register (rd)
+            Bits [19:15]: Source register (rs1)
+            Bits [14:12]: Function (always 0b001 for SLLI)
+            Bits [11:7]: Shift amount (shamt)
+            Bits [6:0]: Function (always 0b0000000)
 
 -------------------------------------------------------------------------------------------------------------
 
@@ -208,22 +208,124 @@ When the CALL instruction is executed, it pushes the return address onto the sta
 
 --> The RET instruction is used in the subroutine to return control to the instruction following the CALL instruction.
 
+Eg1: CALL 0x12345678    ; Call the subroutine at memory address 0x12345678
+
+Eg2: in _start, my_function is called and returns to same place after executing instructions in my_function.
+
+            section .text
+                global _start
+            
+            _start:
+                CALL my_function   ; Call the my_function subroutine
+                ; Continue execution here after my_function returns
+            
+            my_function:
+                ; Subroutine code here
+                ; This is where the CALL instruction jumps to
+                RET                ; Return from subroutine
+
 -------------------------------------------------------------------------------------------------------------
 2. cdqe
+
+--> In x86 assembly language, the CDQE instruction is used to sign-extend a 32-bit value stored in the EAX register to a 64-bit value stored in the RAX register. 
+
+--> This instruction is specifically used in 64-bit mode to extend the sign of a 32-bit value in the lower half of the 64-bit register.
+
+Eg: 
+            
+            section .data
+                my_value dd 0xFFFFFFFF  ; A signed 32-bit value, -1 in decimal
+            
+            section .text
+                global _start
+            
+            _start:
+                MOV EAX, dword [my_value]  ; Load a 32-bit signed value into EAX
+                CDQE                        ; Sign-extend EAX to RAX
+            
+                ; At this point, RAX contains the sign-extended 64-bit value
+                ; Do something with RAX, such as store it or use it in calculations
+
 -------------------------------------------------------------------------------------------------------------
 3. jmp
+
+--> In x86 assembly language, the JMP (Jump) instruction is used to transfer control unconditionally to a different location in the program. 
+
+--> When the JMP instruction is executed, the program execution flow jumps to the specified label or memory address.
+
+SYNTAX:
+      
+      JMP label     ; Jump to a label
+      
+      JMP address   ; Jump to an absolute memory address
+      
 -------------------------------------------------------------------------------------------------------------
 4. mov
+
+--> In x86 assembly language, the MOV instruction is used to move data from one location to another. 
+
+--> It is one of the fundamental instructions for working with data in registers and memory. 
+
+--> The MOV instruction can move data between registers, immediate values, and memory locations.
+
+Syntax:
+      MOV destination, source
+
 -------------------------------------------------------------------------------------------------------------
 5. movsx
+
+--> In x86 assembly language, the MOVSX instruction is used to move and sign-extend a value from a source operand into a destination register. 
+
+--> This instruction is particularly useful when working with signed integers and when you need to extend the sign of a smaller data type to a larger data type.
+
+Syntax:
+
+            MOVSX destination, source
+
 -------------------------------------------------------------------------------------------------------------
 6. sub
+
+--> The SUB instruction is used for subtracting values in x86 assembly.
+
+--> The size of the operands determines the size of the subtraction operation (BYTE, WORD, DWORD, or QWORD).
+
+--> If the result of the subtraction is zero, the Zero Flag (ZF) in the flags register will be set.
+
+--> If the result is negative, the Sign Flag (SF) in the flags register will be set.
+
+--> Overflow occurs if the result cannot be represented in the destination operand size.
+
+SYNTAX: 
+      SUB destination, source
+
+Where:
+
+      destination is the destination operand where the result will be stored.
+      source is the operand to be subtracted from the destination.
+
 -------------------------------------------------------------------------------------------------------------
 7. push
 
+--> In x86 assembly language, the PUSH instruction is used to push a value onto the stack.
+
+--> The stack is a region of memory that is used for temporary storage and for passing arguments to functions. 
+
+--> When you PUSH a value onto the stack, the stack pointer (ESP or RSP register) is decremented, and the value is written to the memory location pointed to by the stack pointer.
+
+Syntax:
+      PUSH source
+
+Eg1:  PUSH EAX   ; Push the value in EAX onto the stack
+This instruction pushes the current value of the EAX register onto the stack.
+
+2. Push an Immediate Value onto the Stack:
+      PUSH 10   ; Push the immediate value 10 onto the stack
+This instruction pushes the value 10 onto the stack.
+
+3. Push a Memory Location onto the Stack:
+      PUSH DWORD [my_variable]   ; Push the value at memory location my_variable onto the
+
 ------------------------------------------------------------------------------------------------------------------------------------------
-
-
 
 
 
