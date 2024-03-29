@@ -36,7 +36,12 @@ Assembler Comparison wrt instuction set using Gotbolt compiler:
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-**Instructions seen in 32bit and 64bit RISC-V ISA**
+**Instructions seen in 32bit and 64bit RISC-V ISA are below which uses following registers**
+
+Registers: sp, ra, s0, a1 - a5, zero.
+
+
+Instructions:
 
 1. add
 
@@ -142,39 +147,51 @@ In this example:
       
       The SLLI instruction shifts the contents of register x5 left by 3 positions.
       The result is stored in register x3.
+
+The SLLI instruction in RISC-V is encoded as follows:
+
+Bits [31:25]: Opcode (always 0b0010011 for arithmetic instructions)
+Bits [24:20]: Destination register (rd)
+Bits [19:15]: Source register (rs1)
+Bits [14:12]: Function (always 0b001 for SLLI)
+Bits [11:7]: Shift amount (shamt)
+Bits [6:0]: Function (always 0b0000000)
    
 8. sw
 
-these instruction keywords are bind with registers such as,
-     
-      sp
-      ra
-      s0
-      a1 - a5
-      zero
+In RISC-V, the SW (Store Word) instruction is used to store a 32-bit word from a register into memory.
+
+This instruction is used when you want to write a value from a register to a specific memory address. 
+
+Syntax:
+
+      SW rs2, offset(rs1)
+
+Where:
+
+      rs2 is the source register containing the data to be stored.
+      offset is a 12-bit signed immediate value representing the offset from the base address in rs1.
+      rs1 is the base register containing the base address where the data will be stored.
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 In x86 ISA, the instructions used are,
 
-      call
-      cdqe
-      jmp
-      mov
-      movsx
-      sub
-      push
+      call, cdqe, jmp, mov, movsx, sub, push
 
-these instruction keywords are bind with registers such as,
+These instruction keywords are bind with registers such as,
 
-      rbp
-      rsp
-      edi
-      eax
-      ecx
-      edx
-      rax
-      rdx
+rbp, rsp, edi, eax, ecx, edx, rax, rdx
+
+Details about instructions: 
+
+1. call
+2. cdqe
+3. jmp
+4. mov
+5. movsx
+6. sub
+7. push
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
