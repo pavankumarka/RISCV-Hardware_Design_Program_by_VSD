@@ -25,8 +25,8 @@ https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/w
 
         Topic3: Simulate New C Program with Function Call
     
-3: Basic Verification flow uisng iVerilog. 
+3: Basic Verification flow using iVerilog. 
 
-https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/RV2_3_Basic_verificationFlow_using_iVerilog%2Cmd
+https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/RV2_3_Basic_verificationFlow_using_iVerilog.md
 
         Topic1: C-Program on RISC-V CPU
