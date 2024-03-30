@@ -25,7 +25,6 @@ Case2.2: Result if Negative during 1's compliment Arithmetic Subtraction:
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/41dd41d1-236d-4678-9977-a426f17ca85b)
 
-Pictures credit: youtube
 ------------------------------------------------------------------------------------------------------------------------------------------
 Calculate 1's and 2's compliment using signed number representation for these, 
        
@@ -143,7 +142,7 @@ Arithmetic Subtraction using 2's compliment
 
 ------------------------------------------------------------------------------
 Arithmetic addition
-------------------------------------------------------------------------------
+-------------------
 
 **1. Arithmetic addition using 1's compliment:**
 
@@ -187,4 +186,7 @@ Arithmetic addition
       
         => 20 + 30 = 50 in decimal.
 
-------------------------------------------------------------------------------
+
+Pictures credits along with VSD: [youtube](https://www.youtube.com/watch?v=HnDWWNXSMd0&list=PL4lHevQbRIlkxpW4YNDPGlD29hZOaUBgl&index=9)
+
+-----------------------------------------------------------------------------------------------------------------------
