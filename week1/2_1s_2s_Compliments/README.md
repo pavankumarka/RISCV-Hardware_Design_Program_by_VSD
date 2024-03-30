@@ -91,7 +91,7 @@ Arithmetic Subtraction using 2's compliment
 ------------------------------------------------------------------------------
 
 ------------------------------------------------------------------------------
-2) 36 - 12
+**2) 36 - 12**
 
 **2.1) calculate (36 - 12) using 1s compliment.**
 
@@ -155,9 +155,9 @@ Arithmetic addition
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/cf4734c3-fa41-4936-b71c-eccc9200d57c)
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
-3) 20 + 30
+**3) 20 + 30**
    
-3.1 Arithmetic addition using 1's compliment
+**3.1 Arithmetic addition using 1's compliment**
         
         +20 --->    0001 0100
         +30 --->    0001 1110 
@@ -173,7 +173,7 @@ Arithmetic addition
 
 ------------------------------------------------------------------------------
 
-3.2 Arithmetic addition using 2's compliment
+**3.2 Arithmetic addition using 2's compliment**
         
         +20 --->    0001 0100
         +30 --->    0001 1110 
