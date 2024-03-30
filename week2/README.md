@@ -12,6 +12,8 @@ https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree/main/w
 
 **Labwork2: RV Day2 - Introduction to ABI and basic verification flow**
 
+https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/README.md
+
       Chapter1: Introduction to Application Binary Interface
 
       Chapter2: Labwork using ABI function calls
@@ -20,6 +22,8 @@ https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree/main/w
 
 
 **Classwork1: week2**
+
+https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/SK1_CPU_Perf_Metrics/ExecTime_vs_RespTime.md
 
       Chapter1: CPU Performance Metrics.
 
