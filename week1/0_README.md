@@ -16,11 +16,11 @@ Task1:
     1. 4bit counter.
         Assignment to cover: Check ALP differences for 4 and 5bits counter for 3 different processors.
 
-Solution: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week1/0_counter/README.md
+Solution: [here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week1/0_counter/README.md)
 
     2. matrix multiplication.
 
-Solution: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week1/1_Matrix_multiplication/README.md
+Solution: [here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week1/1_Matrix_multiplication/README.md)
 
 Task2:
     Assignments: 
@@ -29,15 +29,15 @@ Task2:
     
     A. 10-19        B. 20+30        C. 36+12
 
-Solution: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week1/2_1s_2s_Compliments/README.md
+Solution: [here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week1/2_1s_2s_Compliments/README.md)
 
     2. Design ALU in C-code and verify using gcc compiler and notedown the observations wrt gotbold comipler.
 
-Solution: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week1/3_ALU_Design_using_C_program/README.md
+Solution: [here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week1/3_ALU_Design_using_C_program/README.md)
 
     3. Design the same ALU code in verilog and verify it using iVerilog and gtkwave.
 
     Design Requirments:
     Select lines to select mathematical operations.
 
-Solution: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week1/4_ALU_design_using_HDL/README.md
+Solution: [here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week1/4_ALU_design_using_HDL/README.md)
