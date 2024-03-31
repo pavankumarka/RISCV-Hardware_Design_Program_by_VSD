@@ -5,7 +5,7 @@ Agenda:
 
 1: Application Binary Interface (ABI). 
 
-https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/RV2_1_ABI.md
+[here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/RV2_1_ABI.md)
 
         Topic1: Introduction to ABI.
         
@@ -17,7 +17,7 @@ https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/w
 
 2: Labwork using ABI function calls. 
 
-https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/RV2_2_Labwork_using_ABI_fn_calls.md
+[here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/RV2_2_Labwork_using_ABI_fn_calls.md)
 
         Topic1: Study New Algorithm for Sum 1to N using ASM
 
@@ -27,6 +27,6 @@ https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/w
     
 3: Basic Verification flow using iVerilog. 
 
-https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/RV2_3_Basic_verificationFlow_using_iVerilog.md
+[here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/RV2_3_Basic_verificationFlow_using_iVerilog.md)
 
         Topic1: C-Program on RISC-V CPU
