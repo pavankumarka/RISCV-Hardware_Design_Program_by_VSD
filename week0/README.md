@@ -16,7 +16,7 @@
 1. Download and Install Oracle VirtualBox 5.x / 7.x or later version.
 
 2. Download Virtual Device Image (*.VDI) from link shared by VSD team.
-    Link: https://forgefunder.com/~kunal/riscv_workshop.vdi 
+    Link: [here](https://forgefunder.com/~kunal/riscv_workshop.vdi )
 
     Note: This is 13GB file by name riscv_workshop.vdi, occupies specified or default download folder space.
 
@@ -58,9 +58,9 @@ For more specific steps to build Remote lab setup on Windows follow instructions
 
 For installation of VDI image on Linux, follow last section of the same file or from link below.
 
-Link: https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week0/Steps_to_open_VDI.pdf 
+Link: [here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week0/Steps_to_open_VDI.pdf)
 
-**0.4 installation on iOS** : with M3 chipset, refer https://github.com/riscv-software-src/homebrew-riscv
+**0.4 installation on iOS** : with M3 chipset, refer [here](https://github.com/riscv-software-src/homebrew-riscv)
 
 
 NOTE:Refer Challenges on installing VDI file section to resolve issues that are not covered in the REAME section
