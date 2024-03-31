@@ -2,7 +2,7 @@
 
 **Labwork1: RV Day 1 - Introduction to RISC-V Instruction Set Architecture and GNU compiler toolchain**
 
-https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree/main/week2/RvDay1_Labwork
+[here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree/main/week2/RvDay1_Labwork)
 
         Chapter1: Introduction to RISC-V Keywords
 
@@ -12,7 +12,7 @@ https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/tree/main/w
 
 **Labwork2: RV Day2 - Introduction to ABI and basic verification flow**
 
-https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/README.md
+[here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/README.md)
 
       Chapter1: Introduction to Application Binary Interface
 
@@ -23,7 +23,7 @@ https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/w
 
 **Classwork1: week2**
 
-https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/SK1_CPU_Perf_Metrics/ExecTime_vs_RespTime.md
+[here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/SK1_CPU_Perf_Metrics/ExecTime_vs_RespTime.md)
 
       Chapter1: CPU Performance Metrics.
 
