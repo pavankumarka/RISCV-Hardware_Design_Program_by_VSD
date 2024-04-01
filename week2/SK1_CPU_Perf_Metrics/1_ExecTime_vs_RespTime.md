@@ -40,10 +40,6 @@ Eg: if a machine takes 5sec to read data from Memory to CPU + write the CPU outp
 
 1.2 What is CPU Execution time comprised of? 
 
-or 
-
-How shall we calculate CPU Performance?
-
 ---------------------------------------------
 
 --> There are 2 parts in CPU Execution time,
@@ -83,7 +79,7 @@ User CPU time (0.064sec) is less than system CPU time (.372sec), and together fo
 
 1. Time required for User space process execution time is called **User CPU time.**
 
---> User CPU time says the raw time required at the user space defines the CPU performance.   
+--> User CPU time says defines the CPU performance, which can be more or less when compared with other CPU.   
 
 2. Time required for kernel space process execution time is called **System CPU time.**
 
@@ -91,13 +87,47 @@ User CPU time (0.064sec) is less than system CPU time (.372sec), and together fo
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
+**CPU Performance continued ...**
 
+--> A human running race is measured using a stop watch like how fast the human's can reach the finish line from start line.
+
+--> Similarly for a given program, how many **_clock cycles_** are required for execution, gives one of the metric's for CPU performance. 
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/102c055e-e0ac-48f5-b47e-b32e50068c73)
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/66101449-49bd-4353-b7ee-2a14c1a34253)
+
+--> A clock cycle is also called as clock period which is smallest unit of the CPU execution time, required to execute an instruction ( based on number of clock cycles).
+
+--> Eg: 1clock cycle = T = 1clock period = 1clock tick = 1ns (nano seconds)
+
+--> Clock rate = 1/T = 1/1ns = 1Ghz = Clock Frequency.
+
+--> Transistor scaling and Microarchitecture definitions are some of the ways to increase CPU performance.
+
+-------------------------------------------------------------------------------------------------------------------------------------
+
+**2. How shall we calculate CPU Performance?**
+
+--> Consider 2 Computers having run same instructions, for example in one Computer the load instruction might takes more clock cycles compared to other computer. This comparison will help to measure CPU performance.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/0a36e0dc-a5c2-4288-ae01-34be8fc04cda)
+
+--> Here in the above picture, there are 3 clock cycles required to run the process on the CPU, the CPU tme is measured as follows,
+
+--> **CPU time** = Number of clock cycles X clock period = 3 x 1ns = 3ns.
+
+or
+
+--> **CPU time** = Number of clock cycles / CLock Frequency = 3 / 1GHz = 3ns.
+
+Eg: What is the total number of clock cycles required for program to execute in 20sec CPU time?
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/ebd29935-8b84-4ca8-8fe3-4e1c6f6b8030)
 
 
 
 -------------------------------------------------------------------------------------------------------------------------------------
 
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/1f6f785e-2d70-4be9-8865-f28594a44156)
+-------------------------------------------------------------------------------------------------------------------------------------
 
-
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/b47e3a8d-e6f6-4517-b55e-0d9028504253)
