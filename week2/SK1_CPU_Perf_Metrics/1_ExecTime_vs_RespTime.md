@@ -121,13 +121,54 @@ or
 
 --> **CPU time** = Number of clock cycles / CLock Frequency = 3 / 1GHz = 3ns.
 
-Eg: What is the total number of clock cycles required for program to execute in 20sec CPU time?
+Eg1: What is the total number of clock cycles required for program to execute in 20sec CPU time?
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/ebd29935-8b84-4ca8-8fe3-4e1c6f6b8030)
 
+-------------------------------------------------------------------------------------------------------------------------------------
+Eg2: Find the Clock rate of CPU2 with the CPU1 information provided.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/d4283e63-f66c-4f0c-b186-74e5328b378a)
+
+-------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------
+CPU PERFORMANCE CONTINUED:
+-------------------------------------------------------------------------------------------------------------------------------------
+
+We have already went through RISC-V CPU Instructions in our previous classes [here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/README.md), now we shall take SWAP function as an example to
+understand RISC-V Microarchitecture.
+
+Compare sll vs slli, similarly add with addi, and rest of the instructions which is cirect comparison between RISC-V R vs RISC-V I CPU.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/6beb3340-d9ab-493a-adea-fcb716ad2004)
+
+Task1: What is the clock cycle per instruction in the below CPU information.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/04d02d8d-6d9d-4796-b01c-11dd7e402840)
+
+No. of clock cycle per instruction = average time of all instructions clock cycles.
+
+No. of clock cycle per instruction = (3 + 2 + 3 + 3 + 4 + 4 + 4 + 4 + 2 )/ 9  =  29 /9  = 3.22 Clock Cycles Per instruction (CPI)
+
+CPU clock cycles = 3.22 X 9  = ~29
+
+CPI is important factor to consider while designing CPU.
+
+--------------------------------------------------------------------------------------------------------------------------------------------
+CPU SPEED COMPARIOSN EXAMPLE:
+
+Which CPU is faster?
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/94774515-a8d6-425c-9093-1196d215ef8d)
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/05b8a241-5b3f-4006-9c7c-386de22a411a)
+
+
 
 
 -------------------------------------------------------------------------------------------------------------------------------------
-
+SPIKE TOOL:
+We shall explore Spike Simulator tool used for RISC-V CPU Compiler.
 -------------------------------------------------------------------------------------------------------------------------------------
+
 
