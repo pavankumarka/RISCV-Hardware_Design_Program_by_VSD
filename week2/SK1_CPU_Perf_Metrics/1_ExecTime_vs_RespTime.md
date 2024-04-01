@@ -133,7 +133,7 @@ Eg2: Find the Clock rate of CPU2 with the CPU1 information provided.
 -------------------------------------------------------------------------------------------------------------------------------------
 -------------------------------------------------------------------------------------------------------------------------------------
 CPU PERFORMANCE CONTINUED:
--------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------
 
 We have already went through RISC-V CPU Instructions in our previous classes [here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay2_Labwork/README.md), now we shall take SWAP function as an example to
 understand RISC-V Microarchitecture.
@@ -154,7 +154,7 @@ CPU clock cycles = 3.22 X 9  = ~29
 
 CPI is important factor to consider while designing CPU.
 
---------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------
 CPU SPEED COMPARIOSN EXAMPLE:
 
 Which CPU is faster?
@@ -163,12 +163,18 @@ Which CPU is faster?
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/05b8a241-5b3f-4006-9c7c-386de22a411a)
 
+--------------------------------------------------------------------------------------------------------------------------------------------------
 
+**Code Sequence comparison:**
 
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/4371cb79-fc2e-4de0-b313-7b299eff907a)
 
--------------------------------------------------------------------------------------------------------------------------------------
-SPIKE TOOL:
-We shall explore Spike Simulator tool used for RISC-V CPU Compiler.
--------------------------------------------------------------------------------------------------------------------------------------
+Code sequence A = ((3X1) + (2X2) + (4X3))  = (3 + 4 + 12)CPI = 19CPI.
 
+Code Sequence B = ((5X1) + (2X2) + (3X3))  =  (5 + 4 + 9)CPI = 18CPI.
 
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/193ae93d-7a0d-4fb3-aabb-56cff0d2b9ec)
+
+CODE SEQUENCE 2 is FASTER THAN CODE SEQUENCE 1, though the number of instructions are 10 in RED are more than number of instructions are 9 in BLUE.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
