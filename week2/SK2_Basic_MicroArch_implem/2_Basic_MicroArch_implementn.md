@@ -251,3 +251,4 @@ Perform all above steps for all lab assignments.
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/8779a49d-6dd1-40ae-bb09-5817afbca6f4)
 
+---> Solution we will write steps wise, for quick short answers, we can refer lab work here: [here](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/blob/main/week2/RvDay1_Labwork/RV1_2_Labwork_SwToolChain.md)
