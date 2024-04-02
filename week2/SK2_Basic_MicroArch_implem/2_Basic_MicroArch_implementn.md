@@ -1,3 +1,5 @@
+# W2_SK2_L1 - Introduction To Program Counter And Instr Memory
+
 RISC-V Microarchitecture Implementation:
 ----------------------------------------------------------------------------------
 
@@ -169,3 +171,20 @@ To Conclude:
   Let us say it is 32bit register, it can hold 4Bytes data.
 
 4. Instruction memory or the code memory is of Static-RAM (SRAM) model.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+# W2_SK2_L2 - Introduction To Register File And Data Memory
+
+---------------------------------------------------------------------
+
+--> Instructions are compraised of registers and immediate values.
+
+--> RISC-V 32R or 64R, meaning Registers supported RISC-V ISA for 32bit and/or 64bit CPU. In either bit architecture, there are only 32 number of registers supported. (2^5 = 32 i.e from 0to31)
+
+--> Instructions uses Registers for multiple math an logic operations. These registers are sort of values stored in a memory called Register Bank. These memories locations in the Register Bank have addresses. Whenever a register is called, actually we will refer to either address or values in that specific address of a register Bank.
+
+--> 
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/5431a073-f979-4a33-93b5-9bf9fa114f51)
