@@ -1,0 +1,24 @@
+# TRAIN DIRECTION INDICATOR:
+
+**ABSTRACT**: With multiple railway tracks facility in modern railway station's, currently using specified railway track, dedicatedly for single direction 
+like either left or right for Train stopover is luxury. Moving forward in heavy traffic railway station, In case of missing announcement of trains and 
+display of Platform numbers, In case if same track has to be used for both direction trains for stopover, then there arises the need of a 
+TRAIN DIRECTION INDICATOR, which can help passengers to know the direction of the train in the specified track.
+
+We can also see the above usecase in today's world in LED SIGN BOARDS and Children toys as well, for Harware Design Program, we will keep the concept 
+simple to understand the RISC-V / C-Code / Verilog Coding / GPIO mapping / CHIPCRON Tool and other required concepts in detail, rather focusing on 
+complexity of the Product.
+
+**Solution:**
+
+1. Flow Diagram for Train Direction INDICATOR:
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/878f1c42-6fb2-4015-9376-b01b82b4140f)
+
+
+2. C-Program for Train Direction SIGN BOARD:
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/69b97990-cfbd-4ede-a36a-c4367631bcb2)
+
+
+
