@@ -35,9 +35,13 @@ PC size = (?) in nothing but value in 2^(?).
 # Create a simple program or a script from the objdump file to find number of unique instructions.
     
     ---> Pending
+
+
+--> AFter IF and PC, at decode stage (ID) we need to configure instructions, where we are optimizing the CPU core by mapping only required instructions,
+
 ------------------------------------------------------------------------------------------------------------------------------------------------
 
-1.  
+ then the Execution state, 
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/2f0dda6c-4804-4ceb-bc4c-0ba752e5696e)
 
