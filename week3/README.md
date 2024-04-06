@@ -1,8 +1,8 @@
 # TRAIN DIRECTION INDICATOR:
 
-**ABSTRACT**: With multiple railway tracks facility in modern railway station's, currently using specified railway track dedicatedly for single direction, like either left or right for Train stopover is luxury. Moving forward in heavy traffic railway station's, in case if same track has to be used for both direction train's stopover, then there arises the need of a TRAIN DIRECTION INDICATOR, which can help passengers to know the direction of the train in the specified track, which will help backend train traffic system multiple ways for quick visual impact.
+**ABSTRACT**: With multiple railway tracks facility in modern railway station's, currently using specified railway track dedicatedly for single direction, like either left or right for Train stopover is luxury. Moving forward in heavy traffic railway station's, in case if same track has to be used for both direction train's stopover, then there arises the need of a TRAIN DIRECTION INDICATOR, which can help tracking direction of the train in the specified track that will support backend train traffic system multiple ways and for quick visual impact.
 
-We can also see the above usecase in today's world in LED SIGN BOARDS and Children toys as well, for Harware Design Program, we will keep the concept simple to understand the RISC-V / C-Code / Verilog Coding / GPIO mapping / CHIPCRON Tool and other required concepts in detail, rather focusing on complexity of the Product and its solution.
+We can also see the usefulness of the above theory in today world's simple to complex applications, like LED SIGN BOARDS, Children toys, and reuseable rocket launcher / landing direction as well. In Hardware Design Program, we will keep the concept simple to understand the RISC-V / C-Code / Verilog Coding / GPIO mapping / CHIPCRON Tool / Tapeout and other required concepts in detail, rather focusing on complexity of the Product and its solution.
 
 **Solution:**
 
