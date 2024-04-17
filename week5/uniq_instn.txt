@@ -1,0 +1,21 @@
+addi
+and
+andi
+beq
+bne
+bnez
+j   /// j_type instn
+neg /// xori and addi
+li  /// lui qn addi
+lbu
+lhu
+lui
+ori
+ret /// jalr
+sb
+sh
+snez /// sltu
+slli
+srli
+sub
+sw
