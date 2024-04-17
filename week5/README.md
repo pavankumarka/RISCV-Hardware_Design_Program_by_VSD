@@ -14,15 +14,18 @@ Find Unique instructions:
 Edit processor.v and testbench.v files
 ----------------------------------------
 
-in processor.v file, update IO pins matching x30 register at,
+In processor.v file, update IO pins matching x30 register at,
 
 1. begging of the Wrapper module
+   
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/429ee429-9382-4062-adc0-13c8768fb556)
 
 2. output pins:
+   
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/41f23874-f937-482b-b1c7-d7b0931a0caa)
 
 In testbench.v file, update IO pins as below,
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/8f94a8ea-c653-4348-9580-9510b447af8c)
 
 
