@@ -47,6 +47,10 @@ In testbench.v file, update IO pins as below,
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/8f94a8ea-c653-4348-9580-9510b447af8c)
 
+Run iVerilog command for simulating the FPGA type code verification for the updated processor.v and testbench.v files. 
+------------------------------------------------------------------------------------------------------------------------
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/580a158a-372e-4400-9119-4e6dab9ea944)
 
 
 
