@@ -1,0 +1,146 @@
+
+trainDir.out:     file format elf32-littleriscv
+
+
+Disassembly of section .text:
+
+00010074 <main>:
+   10074:	fe010113          	addi	sp,sp,-32
+   10078:	00812e23          	sw	s0,28(sp)
+   1007c:	02010413          	addi	s0,sp,32
+   10080:	fe042623          	sw	zero,-20(s0)
+   10084:	f0000793          	li	a5,-256
+   10088:	fef42223          	sw	a5,-28(s0)
+   1008c:	fec42783          	lw	a5,-20(s0)
+   10090:	00178793          	addi	a5,a5,1
+   10094:	fef42623          	sw	a5,-20(s0)
+   10098:	100f7693          	andi	a3,t5,256
+   1009c:	0086d693          	srli	a3,a3,0x8
+   100a0:	200f7713          	andi	a4,t5,512
+   100a4:	00975713          	srli	a4,a4,0x9
+   100a8:	000117b7          	lui	a5,0x11
+   100ac:	2ad7a223          	sw	a3,676(a5) # 112a4 <_edata>
+   100b0:	80e1a423          	sw	a4,-2040(gp) # 112a8 <SW2.964>
+   100b4:	000117b7          	lui	a5,0x11
+   100b8:	2a47a703          	lw	a4,676(a5) # 112a4 <_edata>
+   100bc:	00100793          	li	a5,1
+   100c0:	00f71663          	bne	a4,a5,100cc <main+0x58>
+   100c4:	00100713          	li	a4,1
+   100c8:	80e1a623          	sw	a4,-2036(gp) # 112ac <key.962>
+   100cc:	8081a703          	lw	a4,-2040(gp) # 112a8 <SW2.964>
+   100d0:	00100793          	li	a5,1
+   100d4:	00f71663          	bne	a4,a5,100e0 <main+0x6c>
+   100d8:	00200713          	li	a4,2
+   100dc:	80e1a623          	sw	a4,-2036(gp) # 112ac <key.962>
+   100e0:	fec42703          	lw	a4,-20(s0)
+   100e4:	03200793          	li	a5,50
+   100e8:	1af71263          	bne	a4,a5,1028c <main+0x218>
+   100ec:	fe842783          	lw	a5,-24(s0)
+   100f0:	18079e63          	bnez	a5,1028c <main+0x218>
+   100f4:	00100793          	li	a5,1
+   100f8:	fef42423          	sw	a5,-24(s0)
+   100fc:	000117b7          	lui	a5,0x11
+   10100:	2a07a703          	lw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   10104:	00100793          	li	a5,1
+   10108:	06f71063          	bne	a4,a5,10168 <main+0xf4>
+   1010c:	8101a783          	lw	a5,-2032(gp) # 112b0 <LedPattern.965>
+   10110:	00179713          	slli	a4,a5,0x1
+   10114:	80e1a823          	sw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   10118:	8101a783          	lw	a5,-2032(gp) # 112b0 <LedPattern.965>
+   1011c:	0017e713          	ori	a4,a5,1
+   10120:	80e1a823          	sw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   10124:	8101a703          	lw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   10128:	fe442783          	lw	a5,-28(s0)
+   1012c:	00ff7f33          	and	t5,t5,a5
+   10130:	00ef6f33          	or	t5,t5,a4
+   10134:	80c1a703          	lw	a4,-2036(gp) # 112ac <key.962>
+   10138:	00200793          	li	a5,2
+   1013c:	00f71863          	bne	a4,a5,1014c <main+0xd8>
+   10140:	000117b7          	lui	a5,0x11
+   10144:	00400713          	li	a4,4
+   10148:	2ae7a023          	sw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   1014c:	8101a703          	lw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   10150:	0ff00793          	li	a5,255
+   10154:	12f71a63          	bne	a4,a5,10288 <main+0x214>
+   10158:	000117b7          	lui	a5,0x11
+   1015c:	00200713          	li	a4,2
+   10160:	2ae7a023          	sw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   10164:	1240006f          	j	10288 <main+0x214>
+   10168:	000117b7          	lui	a5,0x11
+   1016c:	2a07a703          	lw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   10170:	00200793          	li	a5,2
+   10174:	04f71863          	bne	a4,a5,101c4 <main+0x150>
+   10178:	8101a783          	lw	a5,-2032(gp) # 112b0 <LedPattern.965>
+   1017c:	00179713          	slli	a4,a5,0x1
+   10180:	80e1a823          	sw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   10184:	8101a703          	lw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   10188:	fe442783          	lw	a5,-28(s0)
+   1018c:	00ff7f33          	and	t5,t5,a5
+   10190:	00ef6f33          	or	t5,t5,a4
+   10194:	80c1a703          	lw	a4,-2036(gp) # 112ac <key.962>
+   10198:	00200793          	li	a5,2
+   1019c:	00f71863          	bne	a4,a5,101ac <main+0x138>
+   101a0:	000117b7          	lui	a5,0x11
+   101a4:	00300713          	li	a4,3
+   101a8:	2ae7a023          	sw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   101ac:	8101a783          	lw	a5,-2032(gp) # 112b0 <LedPattern.965>
+   101b0:	0c079c63          	bnez	a5,10288 <main+0x214>
+   101b4:	000117b7          	lui	a5,0x11
+   101b8:	00100713          	li	a4,1
+   101bc:	2ae7a023          	sw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   101c0:	0c80006f          	j	10288 <main+0x214>
+   101c4:	000117b7          	lui	a5,0x11
+   101c8:	2a07a703          	lw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   101cc:	00300793          	li	a5,3
+   101d0:	06f71063          	bne	a4,a5,10230 <main+0x1bc>
+   101d4:	8101a783          	lw	a5,-2032(gp) # 112b0 <LedPattern.965>
+   101d8:	4017d713          	srai	a4,a5,0x1
+   101dc:	80e1a823          	sw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   101e0:	8101a783          	lw	a5,-2032(gp) # 112b0 <LedPattern.965>
+   101e4:	0807e713          	ori	a4,a5,128
+   101e8:	80e1a823          	sw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   101ec:	8101a703          	lw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   101f0:	fe442783          	lw	a5,-28(s0)
+   101f4:	00ff7f33          	and	t5,t5,a5
+   101f8:	00ef6f33          	or	t5,t5,a4
+   101fc:	80c1a703          	lw	a4,-2036(gp) # 112ac <key.962>
+   10200:	00100793          	li	a5,1
+   10204:	00f71863          	bne	a4,a5,10214 <main+0x1a0>
+   10208:	000117b7          	lui	a5,0x11
+   1020c:	00200713          	li	a4,2
+   10210:	2ae7a023          	sw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   10214:	8101a703          	lw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   10218:	0ff00793          	li	a5,255
+   1021c:	06f71663          	bne	a4,a5,10288 <main+0x214>
+   10220:	000117b7          	lui	a5,0x11
+   10224:	00400713          	li	a4,4
+   10228:	2ae7a023          	sw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   1022c:	05c0006f          	j	10288 <main+0x214>
+   10230:	000117b7          	lui	a5,0x11
+   10234:	2a07a703          	lw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   10238:	00400793          	li	a5,4
+   1023c:	04f71663          	bne	a4,a5,10288 <main+0x214>
+   10240:	8101a783          	lw	a5,-2032(gp) # 112b0 <LedPattern.965>
+   10244:	4017d713          	srai	a4,a5,0x1
+   10248:	80e1a823          	sw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   1024c:	8101a703          	lw	a4,-2032(gp) # 112b0 <LedPattern.965>
+   10250:	fe442783          	lw	a5,-28(s0)
+   10254:	00ff7f33          	and	t5,t5,a5
+   10258:	00ef6f33          	or	t5,t5,a4
+   1025c:	80c1a703          	lw	a4,-2036(gp) # 112ac <key.962>
+   10260:	00100793          	li	a5,1
+   10264:	00f71863          	bne	a4,a5,10274 <main+0x200>
+   10268:	000117b7          	lui	a5,0x11
+   1026c:	00100713          	li	a4,1
+   10270:	2ae7a023          	sw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   10274:	8101a783          	lw	a5,-2032(gp) # 112b0 <LedPattern.965>
+   10278:	00079863          	bnez	a5,10288 <main+0x214>
+   1027c:	000117b7          	lui	a5,0x11
+   10280:	00300713          	li	a4,3
+   10284:	2ae7a023          	sw	a4,672(a5) # 112a0 <__DATA_BEGIN__>
+   10288:	fe042623          	sw	zero,-20(s0)
+   1028c:	fec42703          	lw	a4,-20(s0)
+   10290:	00a00793          	li	a5,10
+   10294:	def71ce3          	bne	a4,a5,1008c <main+0x18>
+   10298:	fe042423          	sw	zero,-24(s0)
+   1029c:	df1ff06f          	j	1008c <main+0x18>
