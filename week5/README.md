@@ -6,9 +6,10 @@ Command to obtain disassembly code from RISC-V CPU EXE
 --------------------------------------------------------
 riscv64-unknown-elf-obdump -d 0_trainDir.out 0_trainDir.txt
 
-Find Unique instructions:
+Find Unique instructions: (Ensure Python or python3 is installed, execute "$python3 script.py)
 --------------------------
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/84c11d1a-b95d-4135-a028-1a1af68cdc96)
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/d04c0084-af83-43d1-9fc5-772d23218f8a)
+
 
 Tool to upload json file and assembly file to download processor.v and testbench.v
 ----------------------------------------------------------------------------------
