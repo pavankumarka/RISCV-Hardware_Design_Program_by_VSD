@@ -1,10 +1,10 @@
 Command to generate RISV-V CPU exe file: (note in c program, you can replace main() with _start()), this will resolve warning of _start() not found.
 -----------------------------------------
-riscv64-unknown-elf-gcc -Ofast -march=rv32i -mabi=ilp32 -ffreestanding -nostdlib -o 0_trainDir.out 0_trainDir.c
+riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -nostdlib -o 0_trainDir.out 0_trainDir.c
 
 Command to obtain disassembly code from RISC-V CPU EXE
 --------------------------------------------------------
-riscv64-unknown-elf-obdump -d 0_trainDir.out 0_trainDir.txt
+riscv64-unknown-elf-obdump -d -r 0_trainDir.out 0_trainDir.txt
 
 Find Unique instructions: (Ensure Python or python3 is installed, execute "$python3 script.py)
 --------------------------
