@@ -1,0 +1,17 @@
+Number of different instructions:15
+List of unique instructions:
+sw .
+and .
+li ///addi
+j ///jal
+lui .
+or .
+addi .
+bnez ///bne
+ori .
+srai . 
+lw .
+srli .
+andi .
+slli . 
+bne . 
