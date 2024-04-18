@@ -10,7 +10,7 @@ Find Unique instructions: (Ensure Python or python3 is installed, execute "$pyth
 --------------------------
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/d04c0084-af83-43d1-9fc5-772d23218f8a)
 
-In all.json file, enable (make instructions as true from false state) instructions based on the output of script.py.
+In all_original.json file, enable (make instructions as true from false state) instructions based on the output of script.py.
 
 Ensure to use translations of instructions in all.son file  
 1. li, mv = ADDI
@@ -20,9 +20,10 @@ Ensure to use translations of instructions in all.son file
 5. neg = sub
 6. snez = sltu
 
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/37b80d5f-9f77-4a40-961c-3bf1c45a3acf)
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/4b540830-d6a6-4235-9a7f-7e2950d11832)
 
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/e06648a4-66a8-4f81-8861-dae2ca99bf4a)
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/8d791610-afc8-4796-ac91-5a0861fc2a29)
 
 Tool to upload json file and assembly file to download processor.v and testbench.v
 ----------------------------------------------------------------------------------
