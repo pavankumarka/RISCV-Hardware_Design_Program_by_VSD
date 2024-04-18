@@ -1,4 +1,4 @@
-Command to generate RISV-V CPU exe file
+Command to generate RISV-V CPU exe file: (note in c program, you can replace main() with _start()), this will resolve warning of _start() not found.
 -----------------------------------------
 riscv64-unknown-elf-gcc -Ofast -march=rv32i -mabi=ilp32 -ffreestanding -nostdlib -o 0_trainDir.out 0_trainDir.c
 
@@ -23,7 +23,6 @@ Ensure to use translations of instructions in all.son file
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/37b80d5f-9f77-4a40-961c-3bf1c45a3acf)
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/e06648a4-66a8-4f81-8861-dae2ca99bf4a)
-
 
 Tool to upload json file and assembly file to download processor.v and testbench.v
 ----------------------------------------------------------------------------------
