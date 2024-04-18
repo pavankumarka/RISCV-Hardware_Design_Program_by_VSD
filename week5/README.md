@@ -1,13 +1,30 @@
-Command to generate RISV-V CPU exe file: (note in c program, you can replace main() with _start()), this will resolve warning of _start() not found.
------------------------------------------
-riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -nostdlib -o 0_trainDir.out 0_trainDir.c
+command to generate RISC-V CPU 64bit exe file:
+-----------------------------------------------
+Enable library files and required debug flags in trainDir.c file before executing below command
+
+$ riscv64-unknown-elf-gcc -march=rv64i -mabi=lp64 -o trainDir.out trainDir.c
+
+$ spike pk 0_trainDir.out
+
+Output of 64bit exe file on 64bit Linux CPU:
+---------------------------------------------
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/b815c25e-98a3-4ff4-abe1-f06aaea58016)
+
+Command to generate RISV-V CPU 32bit exe file used to run FPGA type simulation: 
+(note in c program if required, replace main() with _start()), this will resolve warning of _start() not found.
+--------------------------------------------------------------------------------------------------------------
+
+riscv64-unknown-elf-gcc -march=rv32i -mabi=ilp32 -ffreestanding -nostdlib -o trainDir.out trainDir.c
 
 Command to obtain disassembly code from RISC-V CPU EXE
 --------------------------------------------------------
-riscv64-unknown-elf-obdump -d -r 0_trainDir.out 0_trainDir.txt
+riscv64-unknown-elf-obdump -d -r trainDir.out trainDir.txt
 
 Find Unique instructions: (Ensure Python or python3 is installed, execute "$python3 script.py)
---------------------------
+------------------------------------------------------------------------------------------------
+eit script.py file to rename the filename as trainDir.txt and pipe the output to trainDir.uniqInstn
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/d04c0084-af83-43d1-9fc5-772d23218f8a)
 
 In all_original.json file, enable (make instructions as true from false state) instructions based on the output of script.py.
