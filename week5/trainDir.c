@@ -51,7 +51,7 @@ void main()
 		}
 
 		if(SW1 == 1 && SW2 ==1){
-			key =0;
+			key = 0;
 	        }
 
 #ifdef PRINT_TEST_INPUT
