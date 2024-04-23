@@ -129,10 +129,9 @@ initial begin
     neg_rst = ~clk ;
     uart_rxd = 1'b1;
     neg_clk = 1'b1; 
-    input_wires = 2'b01;
+    input_wires = 2'b10;
     #4000
     resetn = 1'b1;
-    input_wires = 2'b10;
     rst=0;
     neg_rst = 0; 
     rst_pin = 0 ; 
