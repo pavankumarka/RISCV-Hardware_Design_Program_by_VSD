@@ -50,6 +50,10 @@ void main()
 			key = 2;
 		}
 
+		if(SW1 == 1 && SW2 ==1){
+			key =0;
+	        }
+
 #ifdef PRINT_TEST_INPUT
 		printf("SW1 = %d\tSW2 = %d\tkey = %d\n", SW1, SW2, key);
 #endif /* PRINT_TEST_INPUT */
