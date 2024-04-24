@@ -175,9 +175,9 @@ Install Yosys packages from link below in the vsdworkshop VM.
 
 Link: https://github.com/YosysHQ/yosys 
 
-1. Install the latest YOSYS version by utilizing following commands in the VM Linux terminal:
+1. Install the latest YOSYS version by utilizing following commands in the VM Linux terminal: (use apt, apt-get, aptitude)
 
-$ sudo aptitude install build-essential clang bison flex libreadline-dev \
+$ sudo aptitude -y install build-essential clang bison flex libreadline-dev \
     gawk tcl-dev libffi-dev git graphviz \
     xdot pkg-config python python3 libftdi-dev \
     qt5-default python3-dev libboost-all-dev cmake libeigen3-dev
@@ -197,6 +197,8 @@ $ make -j$(nproc)
 $ sudo make install
 
 $ make test
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/9d2959b4-1089-4647-ac5c-38ef1ad024ed)
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
