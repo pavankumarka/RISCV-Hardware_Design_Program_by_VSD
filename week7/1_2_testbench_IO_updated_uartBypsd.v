@@ -136,7 +136,6 @@ initial begin
     #400000
     resetn = 1'b1;
     input_wires = 2'b10;
-    #400000
     resetn = 1'b1;
     rst=0;
     neg_rst = 0; 
