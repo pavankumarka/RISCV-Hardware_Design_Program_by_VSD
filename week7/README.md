@@ -1,4 +1,4 @@
-#POST-SYNTHESIS SIMULATION is next target to achieve and close this training program.
+# POST-SYNTHESIS SIMULATION is next target to achieve and close this training program.
 
 The complete test of verilog files with instruction memory makes a whole lot to simulate.
 
@@ -8,7 +8,9 @@ As a first step, instructions to be bypassed in testbench.v file
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-**1.UART BYPASSING: ** in this step, the uart based verification is handled by bypassing or by commenting the instructions in testbench.v file.
+** 1.UART BYPASSING: ** 
+
+in this step, the uart based verification is handled by bypassing or by commenting the instructions in testbench.v file.
 
 Note: the block type (multiple lines) comment in the testbench_IO_updated.v file for all instructions.
 
@@ -139,7 +141,8 @@ Note: the block type (multiple lines) comment in the testbench_IO_updated.v file
 
     --> NOTE: this command prompts the simulation time as in screenshot below
 
-    ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/3f02711f-ab50-4a7c-97af-cf470a9f5b47)
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/3f02711f-ab50-4a7c-97af-cf470a9f5b47)
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
