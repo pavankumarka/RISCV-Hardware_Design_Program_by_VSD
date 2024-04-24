@@ -248,13 +248,35 @@ $ make test
 
 Now we shall convert the behavioral language into RTL language.
 
-The 1_1_processor_IO_Updated_noChanges.v file has following blocks,
+The 2_1_processor_IoUpdtd_SynthChanges_asicType.v file has following blocks,
 1. wrapper module has
-   2.1 test or state machile controls UART functionality.
-   2.2 top module is processor.
-   2.3 uart_inst is used for connecting the outside world.
-   
+   1 test or state machile controls UART functionality.
+   2 top module is processor.
+   3 uart_inst is used for connecting the outside world.
+
+Synthesis required Changes: 
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/a789757d-ad45-491c-a66b-343d5d8463f4)
+
 All above modules are converted into RTL language or series of transistors (AND , OR, XOR gate representation) written into a file, which can be understood by silicon foundaries. This new generated file is called GDS11 file (which details how each Nodes are connected within Silicon area).
+
+Synthesis can be performed when the coding model is in RTL model type and it is not possible for behavioral models. 
+
+2. To prepare RTL model synthesis, there are certain changes to be made for processor.v, which was initially generated for behavioral model using chipcron tool.
+
+ 2.1 In processor.v file writing_inst_done = 1 is updated to writing_inst_done = 0, to make processor as ASIC type, and to perform RTL synthesis.
+
+ 2.2 In the rely sections, functional verification is covered for the processor.v.
+ 
+ 2.3 Simulation for behavioral models has instruction memory and data memory in processor.v file. 
+ The behavioral models are represented as: 
+     1. sky130_sram_2kbyte_1rw1r_32x256_8_inst 
+     and 
+     2. sky130_sram_2kbyte_1rw1r_32x256_8_data 
+  
+ 2.4 We need seperate behavioral models for instruction memory and data memory. To overcome certain functional verification tasks like, preloading the application image into the instruction memory and bypassing the tedious step of loading program instruction in memory via UART during the functional simulation.
+
+  
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
