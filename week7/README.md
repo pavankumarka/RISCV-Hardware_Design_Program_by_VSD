@@ -1,10 +1,12 @@
-# POST-SYNTHESIS SIMULATION is next target to achieve and close this training program.
+# POST-SYNTHESIS and SIMULATION 
 
-The complete test of verilog files with instruction memory makes a whole lot to simulate.
+Post-synthesis and RTL simulation is next target to achieve and close this training program.
+
+The verification of the complete verilog files with instruction memory makes a whole lot to simulate.
 
 So the plan is to consider dividing the complete single solution into multiple individual modules for post synthesis.
 
-As a first step, instructions to be bypassed in testbench.v file
+As a first step, instructions to be bypassed in testbench.v file.
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
@@ -145,5 +147,49 @@ Note: the block type (multiple lines) comment in the testbench_IO_updated.v file
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/3f02711f-ab50-4a7c-97af-cf470a9f5b47)
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# VERILOG RTL SYNTHESIS and GATE-LEVEL (RTL) SIMULATIONS USING YOSYS FRAMEWORK:
+---------------------------------------------------------------------------------
+
+In this section we shall cover 
+
+1. First installing the YOSYS packages required for RTL Synthesis and RTL Simulation.
+
+2. Preparing verilog files for Synthesis.
+
+3. Gate-Level (RTL) Simulation.
+
+---------------------------------------------------------------------------------------
+
+**1. YOSYS Installation**
+
+Install Yosys packages from link below in the vsdworkshop VM.
+
+Link: https://github.com/YosysHQ/yosys 
+
+or
+
+Install the latest YOSYS version by utilizing following commands in the VM Linux terminal:
+
+$ sudo apt install build-essential clang bison flex libreadline-dev \
+    gawk tcl-dev libffi-dev git graphviz \
+    xdot pkg-config python python3 libftdi-dev \
+    qt5-default python3-dev libboost-all-dev cmake libeigen3-dev
+
+$ Clone yosys repository
+
+$ git clone https://github.com/YosysHQ/yosys yosys --depth 1
+
+$ cd yosys
+
+$ git fetch --unshallow
+
+To build Yosys, run 'make' in yosys directory.
+
+$ make -j$(nproc)
+
+$ sudo make install
+
+--------------------------------------------------------------------------------------------------------------------------------------
 
 
