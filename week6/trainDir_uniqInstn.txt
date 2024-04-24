@@ -1,0 +1,22 @@
+Number of different instructions:20
+List of unique instructions:
+beq	.
+and	.
+beqz	.//beq
+slli	.
+andi	.
+mv	.//ADDI
+lui	.
+neg	.//sub
+srli	.
+or	.
+addi	.
+j	.//JAL
+lw	.
+snez	.//sltu
+bne	.
+ori	.
+li	.//ADDI
+sw	.
+bnez	.//bne
+srai	.
