@@ -159,7 +159,15 @@ In this section we shall cover
 
 3. Gate-Level (RTL) Simulation.
 
----------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------
+
+**Introduction to Yosys: **
+
+Yosys is a Verilog RTL synthesis framework to perform logic synthesis, elaboration, and converting a subset of the Verilog Hardware Description Language (HDL) into a BLIF netlist.
+
+Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the yosys C++ code base.
+
+Github link: https://github.com/YosysHQ/yosys
 
 **1. YOSYS Installation**
 
@@ -167,16 +175,14 @@ Install Yosys packages from link below in the vsdworkshop VM.
 
 Link: https://github.com/YosysHQ/yosys 
 
-or
+1. Install the latest YOSYS version by utilizing following commands in the VM Linux terminal:
 
-Install the latest YOSYS version by utilizing following commands in the VM Linux terminal:
-
-$ sudo apt install build-essential clang bison flex libreadline-dev \
+$ sudo aptitude install build-essential clang bison flex libreadline-dev \
     gawk tcl-dev libffi-dev git graphviz \
     xdot pkg-config python python3 libftdi-dev \
     qt5-default python3-dev libboost-all-dev cmake libeigen3-dev
 
-$ Clone yosys repository
+2. To Clone yosys repository
 
 $ git clone https://github.com/YosysHQ/yosys yosys --depth 1
 
@@ -184,11 +190,13 @@ $ cd yosys
 
 $ git fetch --unshallow
 
-To build Yosys, run 'make' in yosys directory.
+3. To build Yosys, run 'make' in yosys directory.
 
 $ make -j$(nproc)
 
 $ sudo make install
+
+$ make test
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
