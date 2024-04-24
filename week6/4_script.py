@@ -1,4 +1,4 @@
-with open('trainDir.txt', 'r') as file:
+with open('3_trainDir_32bit_asm.txt', 'r') as file:
     assembly_code = file.read()
 lines = assembly_code.split('\n')
 unique_instructions = set()
