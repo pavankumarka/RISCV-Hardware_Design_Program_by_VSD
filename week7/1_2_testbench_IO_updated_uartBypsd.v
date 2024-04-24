@@ -130,7 +130,13 @@ initial begin
     uart_rxd = 1'b1;
     neg_clk = 1'b1; 
     input_wires = 2'b10;
-    #4000
+    #400000
+    resetn = 1'b1;
+    input_wires = 2'b01;
+    #400000
+    resetn = 1'b1;
+    input_wires = 2'b10;
+    #400000
     resetn = 1'b1;
     rst=0;
     neg_rst = 0; 
