@@ -182,7 +182,7 @@ $gtkwave waveform.vcd
 
 Eg2: When the input pattern is given more time and changes in input pattern, the simulation is fast but compiling the waveform.vc file takes time (Eg: 900000).
 
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/8c7efb20-c173-4c9b-95ab-c8e8c6b858cc)
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/79bee3f4-63fb-4f2c-b0c7-e5065b01d013)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
