@@ -174,7 +174,7 @@ Now if we run the vvp command for UART verification, the process gets completed 
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/3f02711f-ab50-4a7c-97af-cf470a9f5b47)
 
-Simulation commmand opens the gtkwave window quick as the *.vcd file is of small size.
+Simulation commmand opens the gtkwave window quick as the *.vcd file is of small size, expecting outputs_pins varying here might be difficult.
 
 $gtkwave waveform.vcd 
 
@@ -182,7 +182,13 @@ $gtkwave waveform.vcd
 
 Eg2: When the input pattern is given more time and changes in input pattern, the simulation is fast but compiling the waveform.vc file takes time (Eg: 900000).
 
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/79bee3f4-63fb-4f2c-b0c7-e5065b01d013)
+$iverilog -o trainDirInputVars_v 1_2_testbench_IO_Updated_uartBypsd_InputsVars.v 1_1_processor_IO_upated_NoChanges.v
+
+$vvp trainDirInputVars_v
+
+$gtkwave waveform.vsd
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/3a95fe85-beff-4928-91b0-bece8bd43799)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -242,13 +248,13 @@ $ make test
 
 Now we shall convert the behavioral language into RTL language.
 
-The processor.v file has following blocks,
+The 1_1_processor_IO_Updated_noChanges.v file has following blocks,
 1. wrapper module has
    2.1 test or state machile controls UART functionality.
    2.2 top module is processor.
    2.3 uart_inst is used for connecting the outside world.
    
-All above modules are converted into RTL language or series of transistors (AND , OR, XOR gate representation) written into a file, which can be understood by silicon foundaries. This file is called GDS11 file (which details how each Nodes are connected within Silicon area).
+All above modules are converted into RTL language or series of transistors (AND , OR, XOR gate representation) written into a file, which can be understood by silicon foundaries. This new generated file is called GDS11 file (which details how each Nodes are connected within Silicon area).
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
