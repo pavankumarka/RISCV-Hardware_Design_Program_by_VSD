@@ -10,6 +10,34 @@ As a first step, instructions to be bypassed in testbench.v file.
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
+In json file, as we have set ASIC = false, meaning the processor.v and testbench.v files generated using chipcron tool (via server at IP: 16.16.221.16) were for FGPA based simulation.
+
+In processor.v files, for FPGA based simulation, we assume the instruction memory is already filled by making writing_inst_done = 1 in procssor.v file. 
+
+In processor.v file UART module "uart_inst" sends the data to sky130's "inst_mem" module.
+
+For complete chip verification, we ensure 2 things,
+
+1. UART is writing instructions correctly. this we ensure by checking expected vs received bits are same, using command
+
+    $ iverilog -o train_v testbench.v processor.v
+    $vvt trainDir_v ,with instructions enabled in testbench.v file.
+
+Note: the output shall be something like below matching expected / received.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/c27fc629-ec69-442b-893d-4181bec5d3c4)
+
+2. processor.v is working correctly. For this we will comment the instructions in testbench.v file i.e bypassing UART and setting writing_inst_done = 1 in processor.v file, when reset is triggered.
+
+Then run the iVerilog and vvp commands, the execution runs quick (less than few MBs) an we should be able to view the simulation.
+
+Note: Following above apporach we can simulate the output quick and also verify the modules.
+
+This way uart module is working and top module (processor) is working, instruction memory and data memory is also working. 
+For the application we developed in "C", all verilog modules are working.
+
+--------------------------------------------------------------------------------------------------------------------------------------
+
 ** 1.UART BYPASSING: ** 
 
 in this step, the uart based verification is handled by bypassing or by commenting the instructions in testbench.v file.
@@ -134,7 +162,7 @@ Note: the block type (multiple lines) comment in the testbench_IO_updated.v file
          $finish;
 
 ------------------------------------------------------------------------------------------------------------------
-    Now if we run the vvp command for UART verification, the process gets completed in very few (1-2) seconds.
+Now if we run the vvp command for UART verification, the process gets completed in very few (1-2) seconds.
 
     $iverilog -o trainDir_UartBypassd_v 1_2_testbench_IoUpdtd_UartBypssd.v 1_1_processor_IoUpdtd_NoChangs.v
 
@@ -146,12 +174,20 @@ Note: the block type (multiple lines) comment in the testbench_IO_updated.v file
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/3f02711f-ab50-4a7c-97af-cf470a9f5b47)
 
+Simulation commmand opens the gtkwave window quick as the *.vcd file is of small size.
+
+$gtkwave waveform.vcd 
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/e8b91b0e-cd88-4089-a4f1-5eac3f75d379)
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/028f9ffa-462c-44f9-95bb-46eed9367985)
+
 ----------------------------------------------------------------------------------------------------------------------------------------
 
-# VERILOG RTL SYNTHESIS and GATE-LEVEL (RTL) SIMULATIONS USING YOSYS FRAMEWORK:
+# VERILOG RTL SYNTHESIS USING YOSYS FRAMEWORK and GATE-LEVEL (RTL) SIMULATIONS:
 ---------------------------------------------------------------------------------
 
-In this section we shall cover 
+In this section we shall cover,
 
 1. First installing the YOSYS packages required for RTL Synthesis.
 
@@ -163,7 +199,7 @@ In this section we shall cover
 
 **Introduction to Yosys: **
 
-Yosys is a Verilog RTL synthesis framework to perform logic synthesis, elaboration, and converting a subset of the Verilog Hardware Description Language (HDL) into a BLIF netlist.
+Yosys is a Verilog RTL synthesis framework to perform logic synthesis, elaboration, and converting a subset of the Verilog Hardware Description Language (HDL) into a (BLIF) netlist.
 
 Yosys can be adapted to perform any synthesis job by combining the existing passes (algorithms) using synthesis scripts and adding additional passes as needed by extending the yosys C++ code base.
 
@@ -202,3 +238,17 @@ $ make test
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
+Now we shall convert the behavioral language into RTL language.
+
+The processor.v file has following blocks,
+1. wrapper module has
+   2.1 test or statemachile controls UART functionality
+   2.2 top module is processor
+   2.3 uart_inst is used for connecting the outside world.
+   
+All above modules are converted into RTL language or series of transistors (AND , OR, XOR gate representation) written into a file, which can be understood by silicon foundaries. This file is called GDS11 file (which details how each Nodes are connected within Silicon area).
+
+
+
+
+ 
