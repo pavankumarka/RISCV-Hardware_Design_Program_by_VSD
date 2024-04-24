@@ -136,7 +136,7 @@ Note: the block type (multiple lines) comment in the testbench_IO_updated.v file
 ------------------------------------------------------------------------------------------------------------------
     Now if we run the vvp command for UART verification, the process gets completed in very few (1-2) seconds.
 
-    $iverilog -o trainDir_UartBypassd_v testbench_IoUpdtd_UartBypssd.v processor_IoUpdtd.v
+    $iverilog -o trainDir_UartBypassd_v 1_2_testbench_IoUpdtd_UartBypssd.v 1_1_processor_IoUpdtd_NoChangs.v
 
     --> NOTE: this command prompts a output file trainDir_UartBypassd_v
 
@@ -146,7 +146,7 @@ Note: the block type (multiple lines) comment in the testbench_IO_updated.v file
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/3f02711f-ab50-4a7c-97af-cf470a9f5b47)
 
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------
 
 # VERILOG RTL SYNTHESIS and GATE-LEVEL (RTL) SIMULATIONS USING YOSYS FRAMEWORK:
 ---------------------------------------------------------------------------------
@@ -191,5 +191,4 @@ $ make -j$(nproc)
 $ sudo make install
 
 --------------------------------------------------------------------------------------------------------------------------------------
-
 
