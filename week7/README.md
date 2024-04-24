@@ -180,7 +180,9 @@ $gtkwave waveform.vcd
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/e8b91b0e-cd88-4089-a4f1-5eac3f75d379)
 
-![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/028f9ffa-462c-44f9-95bb-46eed9367985)
+Eg2: When the input pattern is given more time and changes in input pattern, the simulation is fast but compiling the waveform.vc file takes time (Eg: 900000).
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/8c7efb20-c173-4c9b-95ab-c8e8c6b858cc)
 
 ----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -242,12 +244,13 @@ Now we shall convert the behavioral language into RTL language.
 
 The processor.v file has following blocks,
 1. wrapper module has
-   2.1 test or statemachile controls UART functionality
-   2.2 top module is processor
+   2.1 test or state machile controls UART functionality.
+   2.2 top module is processor.
    2.3 uart_inst is used for connecting the outside world.
    
 All above modules are converted into RTL language or series of transistors (AND , OR, XOR gate representation) written into a file, which can be understood by silicon foundaries. This file is called GDS11 file (which details how each Nodes are connected within Silicon area).
 
+--------------------------------------------------------------------------------------------------------------------------------------
 
 
 
