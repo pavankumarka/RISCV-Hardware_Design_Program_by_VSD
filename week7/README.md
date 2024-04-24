@@ -129,6 +129,7 @@ Note: the block type (multiple lines) comment in the testbench_IO_updated.v file
      $display("    FAILS : %d", fails);
     #100000
     $display("Finish simulation at time %d", $time);
+    $finish;
 
 ------------------------------------------------------------------------------------------------------------------
     Now if we run the vvp command for UART verification, the process gets completed in very few (1-2) seconds.
@@ -146,4 +147,3 @@ Note: the block type (multiple lines) comment in the testbench_IO_updated.v file
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-    $finish;
