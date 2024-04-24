@@ -70,7 +70,8 @@ In testbench.v file, update IO pins as below,
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/8f94a8ea-c653-4348-9580-9510b447af8c)
 
-testcase:
+testcase: SW1 = 1.
+
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/83cad6fb-8e1c-45cf-b2cc-dbeda008ce49)
 
 
