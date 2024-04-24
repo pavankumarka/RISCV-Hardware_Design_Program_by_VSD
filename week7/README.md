@@ -153,9 +153,9 @@ Note: the block type (multiple lines) comment in the testbench_IO_updated.v file
 
 In this section we shall cover 
 
-1. First installing the YOSYS packages required for RTL Synthesis and RTL Simulation.
+1. First installing the YOSYS packages required for RTL Synthesis.
 
-2. Preparing verilog files for Synthesis.
+2. Preparing verilog files for Synthesis to generate NetList and simulation.
 
 3. Gate-Level (RTL) Simulation.
 
