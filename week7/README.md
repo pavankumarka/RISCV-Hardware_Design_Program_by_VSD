@@ -205,7 +205,7 @@ In this section we shall cover,
 
 -----------------------------------------------------------------------------------------------------------------------------------
 
-**Introduction to Yosys: **
+** Introduction to Yosys: **
 
 Yosys is a Verilog RTL synthesis framework to perform logic synthesis, elaboration, and converting a subset of the Verilog Hardware Description Language (HDL) into a (BLIF) netlist.
 
@@ -246,7 +246,7 @@ $ make test
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-Now we shall convert the behavioral language into RTL language.
+Converting the behavioral model into RTL model for processor.v.
 
 The 2_1_processor_IoUpdtd_SynthChanges_asicType.v file has following blocks,
 1. wrapper module has
@@ -276,7 +276,10 @@ Synthesis can be performed when the coding model is in RTL model type and it is 
   
  2.4 We need seperate behavioral models for instruction memory and data memory. To overcome certain functional verification tasks like, preloading the application image into the instruction memory and bypassing the tedious step of loading program instruction in memory via UART during the functional simulation.
 
-  
+2.5 Comment the module definitions of both sky130_sram_2kbyte_1rw1r_32x256_8_inst and sky130_sram_2kbyte_1rw1r_32x256_8_data .
+
+2.6 CPU does not require 2k RAM (that will be huge), the already instantiated SRAM modules are renamed from sky130_sram_2kbyte_1rw1r_32x256_8_data and sky130_sram_2kbyte_1rw1r_32x256_8_inst to sky130_sram_1kbyte_1rw1r_32x256_8. This way both data and instruction memory are represented as single memory.
+
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
