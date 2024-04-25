@@ -283,9 +283,14 @@ Synthesis can be performed when the coding model is in RTL model type and it is 
 
  2.5 Comment the module definitions of both sky130_sram_2kbyte_1rw1r_32x256_8_inst and sky130_sram_2kbyte_1rw1r_32x256_8_data .
 
- 2.6 CPU does not require 2k RAM (that will be huge), the already instantiated SRAM modules are renamed from 
- sky130_sram_2kbyte_1rw1r_32x256_8_data and sky130_sram_2kbyte_1rw1r_32x256_8_inst to sky130_sram_1kbyte_1rw1r_32x256_8. This way both 
- data and instruction memory are represented as single memory.
+ 2.6 CPU does not require 2k RAM (that will be huge), the instantiated SRAM modules to be renamed from 
+ sky130_sram_2kbyte_1rw1r_32x256_8_data and sky130_sram_2kbyte_1rw1r_32x256_8_inst to sky130_sram_1kbyte_1rw1r_32x256_8. 
+ This way both data and instruction memory are represented as single memory.
+
+Intermin result: are error of we run iverilog command as below
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/e1a4f770-866b-4a47-93e0-3009b00b0f5e)
+
+2.7. There are behavioral memory models in the processor.v file, which are not synthesizable, so to prepare the design for synthesis, we shall comment out the memory related RTL modules containing behavioral model definitions.
 
 
 
