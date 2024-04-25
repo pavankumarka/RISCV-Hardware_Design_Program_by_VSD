@@ -258,27 +258,35 @@ Synthesis required Changes:
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/a789757d-ad45-491c-a66b-343d5d8463f4)
 
-All above modules are converted into RTL language or series of transistors (AND , OR, XOR gate representation) written into a file, which can be understood by silicon foundaries. This new generated file is called GDS11 file (which details how each Nodes are connected within Silicon area).
+All above modules are converted into RTL language or series of transistors (AND , OR, XOR gate representation) written into a file, which can be understood by silicon foundaries. This new generated file is called GDSII file (which details how each Nodes are connected within Silicon area).
 
+----------------------------------------------------------------------------------------------------------------------------------------
 Synthesis can be performed when the coding model is in RTL model type and it is not possible for behavioral models. 
 
-2. To prepare RTL model synthesis, there are certain changes to be made for processor.v, which was initially generated for behavioral model using chipcron tool.
+2. To prepare RTL model synthesis, there are certain changes to be made for processor.v, which was initially generated for behavioral 
+   model using chipcron tool.
 
- 2.1 In processor.v file writing_inst_done = 1 is updated to writing_inst_done = 0, to make processor as ASIC type, and to perform RTL synthesis.
+ 2.1 In processor.v file writing_inst_done = 1 is updated to writing_inst_done = 0, to make processor as ASIC type, and to perform RTL 
+ synthesis.
 
  2.2 In the rely sections, functional verification is covered for the processor.v.
  
  2.3 Simulation for behavioral models has instruction memory and data memory in processor.v file. 
- The behavioral models are represented as: 
+     The behavioral models are represented as: 
      1. sky130_sram_2kbyte_1rw1r_32x256_8_inst 
      and 
      2. sky130_sram_2kbyte_1rw1r_32x256_8_data 
   
- 2.4 We need seperate behavioral models for instruction memory and data memory. To overcome certain functional verification tasks like, preloading the application image into the instruction memory and bypassing the tedious step of loading program instruction in memory via UART during the functional simulation.
+ 2.4 We need seperate behavioral models for instruction memory and data memory. To overcome certain functional verification tasks like, 
+  preloading the application image into the instruction memory and bypassing the tedious step of loading program instruction in memory 
+  via UART during the functional simulation.
 
-2.5 Comment the module definitions of both sky130_sram_2kbyte_1rw1r_32x256_8_inst and sky130_sram_2kbyte_1rw1r_32x256_8_data .
+ 2.5 Comment the module definitions of both sky130_sram_2kbyte_1rw1r_32x256_8_inst and sky130_sram_2kbyte_1rw1r_32x256_8_data .
 
-2.6 CPU does not require 2k RAM (that will be huge), the already instantiated SRAM modules are renamed from sky130_sram_2kbyte_1rw1r_32x256_8_data and sky130_sram_2kbyte_1rw1r_32x256_8_inst to sky130_sram_1kbyte_1rw1r_32x256_8. This way both data and instruction memory are represented as single memory.
+ 2.6 CPU does not require 2k RAM (that will be huge), the already instantiated SRAM modules are renamed from 
+ sky130_sram_2kbyte_1rw1r_32x256_8_data and sky130_sram_2kbyte_1rw1r_32x256_8_inst to sky130_sram_1kbyte_1rw1r_32x256_8. This way both 
+ data and instruction memory are represented as single memory.
+
 
 
 --------------------------------------------------------------------------------------------------------------------------------------
