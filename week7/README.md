@@ -199,7 +199,7 @@ In this section we shall cover,
 
 1. First installing the YOSYS packages required for RTL Synthesis.
 
-2. Preparing verilog files for Synthesis to generate NetList and simulation.
+2. Preparing verilog files for Synthesis to generate NetList for functional Verification.
 
 3. Gate-Level (RTL) Simulation.
 
@@ -266,31 +266,39 @@ Synthesis can be performed when the coding model is in RTL model type and it is 
 2. To prepare RTL model synthesis, there are certain changes to be made for processor.v, which was initially generated for behavioral 
    model using chipcron tool.
 
- 2.1 In processor.v file writing_inst_done = 1 is updated to writing_inst_done = 0, to make processor as ASIC type, and to perform RTL 
- synthesis.
+   ** Note:
+       1. processor.v is downloaded from chipcron tool,
+       2. 8_1_processor_IO_Updated.v or 1_1_processor_IO_Updated_noChanges.v has IO updates for processor.v file
 
- 2.2 In the rely sections, functional verification is covered for the processor.v.
+2.1 In 8_1_processor_IO_Updated.v or 1_1_processor_IO_Updated_noChanges.v file has instruction writing_inst_done = 1 is updated to writing_inst_done = 0, to make ** processor as ASIC type** in file 2_1_processor_IoUpdtd_SynthChanges_asicType.v, and to perform RTL synthesis. In the following section functional verification is covered for the 2_1_processor_IoUpdtd_SynthChanges_asicType.v.
  
- 2.3 Simulation for behavioral models has instruction memory and data memory in processor.v file. 
-     The behavioral models are represented as: 
+ 2.3 Simulation for behavioral models has instruction memory and data memory in 2_1_processor_IoUpdtd_SynthChanges_asicType.v file. 
+     The behavioral models are represented as:
      1. sky130_sram_2kbyte_1rw1r_32x256_8_inst 
      and 
      2. sky130_sram_2kbyte_1rw1r_32x256_8_data 
   
- 2.4 We need seperate behavioral models for instruction memory and data memory. To overcome certain functional verification tasks like, 
-  preloading the application image into the instruction memory and bypassing the tedious step of loading program instruction in memory 
-  via UART during the functional simulation.
+ 2.4 We need seperate models for instruction memory and data memory while designing behavioral model. But the goal is to overcome behavioral model type verification and simulation and to meet certain functional verification and simulation tasks like:
+     2.4.1. Preloading the application image into the instruction memory for functional verification and 
+     2.4.2. Bypassing the instruction-set step of loading program instruction in memory via UART during the functional simulation.
 
- 2.5 Comment the module definitions of both sky130_sram_2kbyte_1rw1r_32x256_8_inst and sky130_sram_2kbyte_1rw1r_32x256_8_data .
+To further routing to perform RTL Synthesis, we need to perform following steps:
+     
+ 2.5 Comment the module definitions of both sky130_sram_2kbyte_1rw1r_32x256_8_inst and sky130_sram_2kbyte_1rw1r_32x256_8_data for RTL verification and Synthesis in 2_1_processor_IoUpdtd_SynthChanges_asicType.v file.
 
- 2.6 CPU does not require 2k RAM (that will be huge), the instantiated SRAM modules to be renamed from 
- sky130_sram_2kbyte_1rw1r_32x256_8_data and sky130_sram_2kbyte_1rw1r_32x256_8_inst to sky130_sram_1kbyte_1rw1r_32x256_8. 
- This way both data and instruction memory are represented as single memory.
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/4f24e9f4-32d2-4dff-b435-9c7c497dfd89)
 
-Intermin result: are error of we run iverilog command as below
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/c2d8b353-fd6b-4d55-8c12-49ec62c7da8c)
+
+Intermin result: error obtained if in case we run iverilog command as below
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/e1a4f770-866b-4a47-93e0-3009b00b0f5e)
 
-2.7. There are behavioral memory models in the processor.v file, which are not synthesizable, so to prepare the design for synthesis, we shall comment out the memory related RTL modules containing behavioral model definitions.
+ 2.6 To use the Foundry provided black box memory modules and as the IOT CPU does not require 2k RAM (as that will be huge size), the instantiated SRAM modules to be renamed from sky130_sram_2kbyte_1rw1r_32x256_8_data and sky130_sram_2kbyte_1rw1r_32x256_8_inst to **sky130_sram_1kbyte_1rw1r_32x256_8** . This way both data and instruction memory are represented as single memory in file 2_1_processor_IoUpdtd_SynthChanges_asicType.v file.
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/64b79757-4042-41d4-afba-f6405d5c6d87)
+
+
+
 
 
 
