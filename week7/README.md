@@ -297,10 +297,77 @@ Intermin result: error obtained if in case we run iverilog command as below
 
 ![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/64b79757-4042-41d4-afba-f6405d5c6d87)
 
+Yosys Commands to synthisize:
 
+Note: Ensure latest version of Yosys installed.
 
+1. Read liberty file to import from sky130 cells
 
+$ read_liberty -lib sky130_fd_sc_hd__tt_025C_1v80_256.lib
 
+2. Read your updated verilog file and generate RTL
+
+$ read_verilog 2_1_processor_IoUpdtd_SynthChanges_asicType.v
+
+3. Synthesis of the top module (wrapper)
+
+$ synth -top wrapper
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/5e14378e-53db-4709-9894-c0a31a048263)
+
+Yosys output from synthesis command:
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/e8f0447d-4812-4411-bbc9-86f236bd44c6)
+
+Let us move to Next stage:
+
+4. Mapping yosys standard cell to sky130 lib logic cells
+
+$ abc -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/083f6541-7eb8-445e-8823-0009f35a9ece)
+
+5. Mapping sky130 lib flip-flop cells
+
+$ dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80_256.lib
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/e8a12cee-6cae-490d-b40b-7328918557e8)
+
+6. Synthesis dumping output
+
+$ write_verilog 2_2_processor_GpIo_SynthChanged_asicType_BBoxMem_output.v
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/25cd86eb-7720-409f-8c67-1756b1262375)
+
+7. Generating Graphviz representation of the design
+
+$ show wrapper
+
+7.1. commandline output
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/9335e16a-1516-43c6-bd84-7ff680558ab5)
+
+7.2 birdeye xDot top view (Zoom-In)
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/2fca0860-8fa8-4cc7-ad4f-cadd26b9bcfb)
+
+7.3 xDot intermediate view (Zoom-In)
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/27cdf1a0-da24-4626-9f2a-70bbcf02c776)
+
+7.4 xDot module level view (Zoom-In)
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/615670e6-8367-4c5a-a33e-39171ae04bd2)
+
+7.5 xDot mux link view (Zoom-In to view)
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/3617e01d-16d6-4a34-9fd3-5a4625e68da4)
+
+8. Mux and D-FF link view
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/9cfb55a5-d22c-4c40-92f5-bdb93a8475f0)
+
+Let us move to RTL Simulation and close this tutorial before we start Timing analysis and Physical Design Flow. 
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
