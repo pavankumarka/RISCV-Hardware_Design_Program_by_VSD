@@ -21,6 +21,7 @@ For complete chip verification, we ensure 2 things,
 1. UART is writing instructions correctly. this we ensure by checking expected vs received bits are same, using command
 
     $ iverilog -o train_v testbench.v processor.v
+   
     $vvt trainDir_v ,with instructions enabled in testbench.v file.
 
 Note: the output shall be something like below matching expected / received.
