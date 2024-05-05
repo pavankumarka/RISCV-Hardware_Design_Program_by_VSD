@@ -10,7 +10,7 @@ As a first step, instructions to be bypassed in testbench.v file.
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-In json file, as we have set ASIC = false, meaning the processor.v and testbench.v files generated using chipcron tool (via server at IP: 16.16.221.16) were for FGPA based simulation.
+In json file, as we have set ASIC = false, meaning the processor.v and testbench.v files generated using chipcron tool (via server at IP: 16.16.202.16) were for FGPA based simulation.
 
 In processor.v files, for FPGA based simulation, we assume the instruction memory is already filled by making writing_inst_done = 1 in procssor.v file. 
 
