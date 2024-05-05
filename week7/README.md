@@ -371,6 +371,34 @@ Let us move to RTL Simulation and close this tutorial before we start Timing ana
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
+# RTL Simulation:
 
+1. Copy 1_Processor_ file to 3_2_processor_. In file 3_2_Processor, update the system to simulate in the form of FPGA type by updating writing_inst_done = 1 from writing_inst_done = 0, which was recently moved to a ASIC type for RTL synthesis.
 
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/59ea5611-ce1b-43d2-83fa-4992b803676b)
  
+2. Match the library file containing module names in processor.v file updated for FGPA type simulation:
+
+For instruction memory:
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/6beb8b70-19d5-4983-b8d2-59d66c60a770)
+
+For Data memory:
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/49e3cc57-7006-4fc8-bc0b-cdbc404ba588)
+
+3. Copy all instructions in the 3_2_Processor_ file to sky130_sram_1kbyte.v library file
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/d534edfe-82f6-49e4-b00d-01a6ee667763)
+
+4. Place primitives.v file and sky130_fd_sc_hd.v in the same folder where RTL simulation is planned.
+
+5. Run iverilog command for 3_2_processor.v file with testbench and library files to obtain output by bypassing UART and simulate using gtkWave simulation is performed using following command,
+
+$ iverilog -o RTLSimu_using_SynthReadyHDL_vvp testbench_IoUpdatd_InstnBypassd_MultlInputVars.v 3_2_processor_gpioUpdtd_CheckwitBboxMem_AndFpgaUpdtd.v sky130_sram_1kbyte_1rw1r_32X256.v sky130_fd_sc_hd.v primitives.v
+
+Output: 
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/90e51854-883e-440a-bd69-e7635f00d0ee)
+
+----------------------------------------------------------------------------------------------------------------------
