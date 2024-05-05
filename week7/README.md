@@ -22,7 +22,9 @@ For complete chip verification, we ensure 2 things,
 
     $ iverilog -o train_v testbench.v processor.v
    
-    $vvt trainDir_v ,with instructions enabled in testbench.v file.
+    $vvt trainDir_v
+
+with instructions enabled in testbench.v file.
 
 Note: the output shall be something like below matching expected / received.
 
