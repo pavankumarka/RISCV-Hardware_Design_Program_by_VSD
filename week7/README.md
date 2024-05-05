@@ -396,7 +396,23 @@ For Data memory:
 
 4. Place primitives.v file and sky130_fd_sc_hd.v in the same folder where RTL simulation is planned.
 
-5. Run iverilog command for 3_2_processor.v file with testbench and library files to obtain output by bypassing UART and simulate using gtkWave simulation is performed using following command,
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Now that we can verify and simulate the design with SRAM cells by using UART (uncomment all instructions in testbench.v file) and using bypassing UART (commenting all instructions in testbench.v file).
+
+1. Verification using UART: ((uncomment / enabling all instructions in testbench_IoUpdatd_InstnBypassd_MultlInputVars.v file)
+
+Run following iverilog command and vvp command to verify using UART,
+
+$ iverilog -o RTLSimu_using_SynthReadyHDL_vvp testbench_IoUpdatd_InstnBypassd_MultlInputVars.v 3_2_processor_gpioUpdtd_CheckwitBboxMem_AndFpgaUpdtd.v sky130_sram_1kbyte_1rw1r_32X256.v sky130_fd_sc_hd.v primitives.v
+
+$ vvp RTLSimu_using_SynthReadyHDL_vvp
+
+![image](https://github.com/pavankumarka/RISCV-Hardware_Design_Program_by_VSD/assets/22821014/77e474e2-9449-4a39-a36b-0e3a47b3ca5c)
+
+2. Simulation using bypassing UART technique: 
+
+Run iverilog command for 3_2_processor.v file with testbench by bypassing (commenting all instructions in testbench_IoUpdatd_InstnBypassd_MultlInputVars.v file) technique and library files ( enabling instructions by copying from processor.v file in sky130_sram_1kbyte_1rw1r_32X256.v ) to obtain output by bypassing UART and simulate using gtkWave simulation is performed using following command,
 
 $ iverilog -o RTLSimu_using_SynthReadyHDL_vvp testbench_IoUpdatd_InstnBypassd_MultlInputVars.v 3_2_processor_gpioUpdtd_CheckwitBboxMem_AndFpgaUpdtd.v sky130_sram_1kbyte_1rw1r_32X256.v sky130_fd_sc_hd.v primitives.v
 
