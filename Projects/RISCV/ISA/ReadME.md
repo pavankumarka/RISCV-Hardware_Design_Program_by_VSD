@@ -105,6 +105,24 @@ Similar to vector extensions but with specific features for packed SIMD (Single 
 
 An extension for processors that need to work with large memory models (used in RV128).
 
+# Example Configurations
+
+Here are some of the common combinations of these extensions:
+
+    RV32I:        Supports basic arithmetic, logical, control flow, and memory access instructions
+    RV32IM:       32-bit base with multiplication and division instructions.
+    RV32IMAC:    32-bit base with multiplication, division, atomic, and compressed instructions.
+    RV64IMAFDC:  64-bit base with multiplication, division, atomic, floating-point (single and double precision), and compressed instructions.
+    RV64G:       64-bit base with the "G" set, which includes:
+        I (Base integer)
+        M (Multiplication and Division)
+        A (Atomic operations)
+        F (Single-precision floating-point)
+        D (Double-precision floating-point)
+        C (Compressed instructions)
+    RV128IMAFDC:  128-bit base with the most common extensions, including integer operations, multiplication, division, atomic, floating-point, and compressed instructions.
+
+
 # Instruction Formats
 
 RISC-V instructions are encoded in a fixed 32-bit format, with six main formats:
