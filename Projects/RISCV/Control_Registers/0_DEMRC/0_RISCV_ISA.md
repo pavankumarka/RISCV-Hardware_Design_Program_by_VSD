@@ -61,39 +61,39 @@ Extends RV32I to support 64-bit operations.
 
 128-bit base integer instruction set (mostly theoretical and not widely implemented).
 
-7.4 Optional Extensions
+# Optional Extensions
 
 RISC-V allows for optional extensions to add functionality. Some common extensions include:
 
-7.4.1 M (Integer Multiplication and Division):
+1 M (Integer Multiplication and Division):
 
 Adds instructions for multiplication (MUL, MULH) and division (DIV, REM).
 
-7.4.2 A (Atomic Operations):
+2 A (Atomic Operations):
 
 Adds atomic memory operations for synchronization (e.g., LR for load-reserved and SC for store-conditional).
 
-7.4.3 F (Single-Precision Floating-Point):
+3 F (Single-Precision Floating-Point):
 
 Adds 32-bit floating-point instructions.
 
-7.4.4 D (Double-Precision Floating-Point):
+4 D (Double-Precision Floating-Point):
 
 Adds 64-bit floating-point instructions.
 
-7.4.5 C (Compressed Instructions):
+5 C (Compressed Instructions):
 
 Adds 16-bit compressed instructions to improve code density.
 
-7.4.6 B (Bit Manipulation):
+6 B (Bit Manipulation):
 
 Adds instructions for bit-level operations (e.g., bitwise rotations, counting leading/trailing zeros).
 
-7.4.7 V (Vector Operations):
+7 V (Vector Operations):
 
 Adds SIMD (Single Instruction, Multiple Data) instructions for vector processing.
 
-7.4.8 Zicsr (Control and Status Register Access):
+8 Zicsr (Control and Status Register Access):
 
 Adds instructions to access control and status registers (CSRs).
 
