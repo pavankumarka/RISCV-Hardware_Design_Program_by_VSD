@@ -1,4 +1,4 @@
-# RISCV Introduction:
+# RISCV ISA Introduction:
 
 The RISC-V (pronounced "risk-five") instruction set architecture (ISA) is an open-source, modular, and extensible ISA (Instruction Set Architecture) designed for a 
 wide range of computing applications, from embedded systems to supercomputers. It was developed at the University of California, Berkeley, and is now maintained by 
@@ -96,6 +96,14 @@ Adds SIMD (Single Instruction, Multiple Data) instructions for vector processing
 8 Zicsr (Control and Status Register Access):
 
 Adds instructions to access control and status registers (CSRs).
+
+9. P (Packed-SIMD):
+
+Similar to vector extensions but with specific features for packed SIMD (Single Instruction, Multiple Data) operations.
+
+10. L (RISC-V Large Memory Model):
+
+An extension for processors that need to work with large memory models (used in RV128).
 
 # Instruction Formats
 
