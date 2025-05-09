@@ -1,0 +1,136 @@
+$date
+	Sat May 10 02:54:44 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_skew_sim $end
+$var wire 1 ! q_skewed $end
+$var wire 1 " q_main $end
+$var reg 1 # clk_main $end
+$var reg 1 $ clk_skewed $end
+$var reg 1 % d $end
+$var reg 1 & rst $end
+$scope module dff1 $end
+$var wire 1 # clk $end
+$var wire 1 % d $end
+$var wire 1 & rst $end
+$var reg 1 " q $end
+$upscope $end
+$scope module dff2 $end
+$var wire 1 $ clk $end
+$var wire 1 % d $end
+$var wire 1 & rst $end
+$var reg 1 ! q $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+1&
+0%
+0$
+0#
+0"
+0!
+$end
+#5000
+1#
+#8000
+1$
+#10000
+0#
+#12000
+0&
+#13000
+0$
+#15000
+1#
+#18000
+1$
+#20000
+0#
+#22000
+1%
+#23000
+0$
+#25000
+1"
+1#
+#28000
+1!
+1$
+#30000
+0#
+#32000
+0%
+#33000
+0$
+#35000
+0"
+1#
+#38000
+0!
+1$
+#40000
+0#
+#42000
+1%
+#43000
+0$
+#45000
+1"
+1#
+#48000
+1!
+1$
+#50000
+0#
+#52000
+0%
+#53000
+0$
+#55000
+0"
+1#
+#58000
+0!
+1$
+#60000
+0#
+#63000
+0$
+#65000
+1#
+#68000
+1$
+#70000
+0#
+#73000
+0$
+#75000
+1#
+#78000
+1$
+#80000
+0#
+#83000
+0$
+#85000
+1#
+#88000
+1$
+#90000
+0#
+#93000
+0$
+#95000
+1#
+#98000
+1$
+#100000
+0#
+#102000
