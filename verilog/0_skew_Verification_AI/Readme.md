@@ -16,4 +16,14 @@ $ iverilog dff_sync.v tb_dff_sync.v -o dff_skew
 $ vvp dff_skew
 $gtkwave gtk_dff_skew_sim.vcd
 
+# skew introuction: 
+in tb_dff_sync.v line 17, change the line as below
+#3 clk_skewed = clk_main;    // skew_introduction by 3ns
+
 ![image](https://github.com/user-attachments/assets/3ee4674f-859c-4f9c-b9af-1e53d3e8b363)
+
+# skew resolution
+in tb_dff_sync.v line 17, change the line as below
+#0 clk_skewed = clk_main;    // skew_resolution
+
+![image](https://github.com/user-attachments/assets/9b7143e9-9af1-4b7c-bacb-770b23b0d588)
