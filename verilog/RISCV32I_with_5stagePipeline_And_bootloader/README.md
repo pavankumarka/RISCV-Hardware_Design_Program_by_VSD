@@ -116,3 +116,87 @@ These are flip-flops between pipeline stages to hold data and control signals.
         Exception Handling	Trap instructions, misaligned PC
         Multicycle Divider	For div, rem (RV32IM)
         Pipeline Flushing	On branches or mispredicts
+        
+-------------------------------------------------------------------------------
+
+✅ Stage 2: Instruction Decode (ID)
+
+📦 Responsibilities:
+
+    Decode the fetched instruction.
+
+    Read registers rs1 and rs2.
+
+    Generate control signals.
+
+    Extract and sign-extend the immediate value.
+
+    Pass all this to the next pipeline stage (ID/EX).
+    
+-------------------------------------------------------------------------------
+    
+Stage 3: Execute (EX)
+    
+    Includes:
+
+    ALU
+
+    ALU Control
+
+    Branch calculation logic
+
+    ID/EX → EX/MEM pipeline register
+
+✅ Stage 3: Execute (EX)
+📦 Responsibilities:
+
+    Perform ALU operations (add, sub, and, or, etc.).
+
+    Compute branch target address.
+
+    Select ALU inputs (register or immediate).
+
+    Determine the ALU operation from instruction and control signals.
+
+    Pass results to EX/MEM pipeline register.
+
+-------------------------------------------------------------------------------
+✅ Next stage is:
+
+    Stage 4: Memory Access (MEM)
+
+    Load and store operations
+
+    Access data memory
+
+    Pass to MEM/WB register
+
+📦 Responsibilities:
+
+    Perform load (lw) and store (sw) operations.
+
+    Use the address computed by ALU to access Data Memory.
+
+    Control memory read/write based on instruction type.
+
+    Pass results to MEM/WB pipeline register.
+
+-------------------------------------------------------------------------------
+✅ Next stage is:
+    
+    Stage 5: Writeback (WB)
+
+    Write result from ALU or Memory back to the register file.
+
+📦 Responsibilities:
+
+    Select either:
+
+        ALU result (for instructions like add, sub, etc.), or
+
+        Data Memory output (for lw)
+
+    Write the selected result to the destination register in the register file
+
+-------------------------------------------------------------------------------
+
