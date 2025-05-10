@@ -200,3 +200,215 @@ Stage 3: Execute (EX)
 
 -------------------------------------------------------------------------------
 
+✅ Step 6: Pipeline Integration Plan
+
+📌 Key Components:
+
+    Pipeline Registers: Hold stage outputs between cycles
+
+        IF/ID, ID/EX, EX/MEM, MEM/WB
+
+    Hazard Detection Unit (for load-use hazards)
+
+    Forwarding Unit (to resolve data hazards)
+
+    Stall & Flush Logic (for control hazards/branches)
+
+    Top Module (riscv_pipelined_cpu.v)
+
+    Testbench (tb_riscv_pipelined_cpu.v)
+
+-------------------------------------------------------------------------------
+
+✅ Step 6.1: IF/ID Pipeline Register
+📦 Purpose:
+
+    Store instruction and PC from Instruction Fetch (IF) stage.
+
+    Feed them into the Instruction Decode (ID) stage in the next cycle.
+
+Signal	Description
+
+pc_in	Program Counter from IF stage
+
+instr_in	Instruction fetched from memory
+
+flush	Clears the register (on branch mispredict)
+
+stall	Prevents update (on data hazard)
+
+-------------------------------------------------------------------------------
+
+✅ Step 6.2: ID/EX Pipeline Register
+📦 Purpose:
+
+Holds all necessary data decoded from the instruction in the ID stage and passes it to the EX stage:
+
+    Register values (rs1_val, rs2_val)
+
+    Immediate value
+
+    Control signals
+
+    Register addresses
+
+
+-------------------------------------------------------------------------------
+
+✅ Step 6.3: EX/MEM Pipeline Register
+📦 Purpose:
+
+This register stores:
+
+    ALU result
+
+    Second register value (for store instructions)
+
+    Destination register
+
+    Control signals needed in the MEM and WB stages
+
+📌 Key Outputs:
+
+Signal	Description
+
+alu_result_out	Address (for loads/stores) or computation
+
+rs2_val_out	Data to store (for sw)
+
+rd_out	Register destination
+
+Control outputs	Passed to MEM/WB and Writeback logic
+
+-------------------------------------------------------------------------------
+
+✅ Step 6.4: MEM/WB Pipeline Register
+
+📦 Purpose:
+
+This stage stores:
+
+    Data read from memory (for load)
+
+    ALU result (for R-type and I-type)
+
+    Destination register
+
+    Control signals for write-back selection and register file update
+
+📌 Notes:
+
+Signal	Description
+
+mem_data_out	Data loaded from memory
+
+alu_result_out	ALU result from EX stage
+
+mem_to_reg_out	Chooses whether to write memory or ALU val
+
+reg_write_out	Enables register file write
+
+-------------------------------------------------------------------------------
+
+🔜 What’s Next?
+
+Would you like to proceed with:
+
+    🚦 Forwarding Unit (for data hazards), or
+
+    🧠 Hazard Detection Unit, or
+
+    🔗 Top-level integration of all stages into riscv_pipelined_cpu.v?
+
+✅ Step 7.1: Forwarding Unit
+
+📦 Purpose:
+
+The Forwarding Unit detects RAW (Read After Write) hazards and forwards data from the EX/MEM or MEM/WB stages back to the ALU inputs.
+
+-------------------------------------------------------------------------------
+
+✅ Step 7.2: Hazard Detection Unit
+
+📦 Purpose:
+
+Detects hazards caused by instructions like lw when the next instruction tries to use the loaded value before it’s ready (i.e., load-use hazard).
+The HDU stalls the pipeline to avoid incorrect execution.
+
+📌 Outputs:
+
+Signal	Meaning
+
+pc_write	0 to stall the PC update
+
+if_id_write	0 to stall the IF/ID register
+
+control_stall	1 to insert a NOP (disable controls)
+
+-------------------------------------------------------------------------------
+
+✅ Step 7.3: Control Unit with Stall Support
+
+📦 Purpose:
+
+Generates control signals based on the current opcode in the Decode (ID) stage. If a hazard is detected (control_stall = 1), the control signals are nulled (NOP inserted).
+
+📌 Output Signals:
+
+Signal	Description
+
+reg_write	Write back to register file
+
+mem_to_reg	Selects between ALU result or memory for WB
+
+mem_read	Enables memory read
+
+mem_write	Enables memory write
+
+alu_op	Passed to ALU control to choose operation
+
+alu_src	Selects 2nd ALU operand (reg or imm)
+
+-------------------------------------------------------------------------------
+
+✅ Step 8: Top-Level Pipelined CPU (Minimal Integration Version)
+
+📦 Module: riscv_pipelined_cpu.v
+
+To keep this clean and manageable, we'll start with a skeleton that integrates the major components and you can expand as needed.
+
+-------------------------------------------------------------------------------
+🧪 Step 9: Create a Testbench (tb_riscv_pipelined_cpu.v)
+
+This testbench will:
+
+    Instantiate the top-level CPU module.
+
+    Drive a clock signal.
+
+    Observe outputs like register values, program counter, etc.
+
+-------------------------------------------------------------------------------
+✅ Step 10: Simple RISC-V Program → Machine Code → Instruction Memory
+🔧 RISC-V Assembly Code Example (RV32I)
+
+We’ll write a simple program:
+
+addi x1, x0, 5       # x1 = 5
+addi x2, x0, 3       # x2 = 3
+add  x3, x1, x2      # x3 = x1 + x2 = 8
+sw   x3, 0(x0)       # Store x3 at memory address 0
+
+🔁 Convert Assembly to Machine Code
+
+We'll use the RV32I encoding format:
+        Instruction	Opcode	Binary Encoding
+        addi x1, x0, 5	0x00500093	000000000101 00000 000 00001 0010011
+        addi x2, x0, 3	0x00300113	000000000011 00000 000 00010 0010011
+        add x3, x1, x2	0x002081B3	0000000 00010 00001 000 00011 0110011
+        sw x3, 0(x0)	0x00302023	0000000 00011 00000 010 00000 0100011
+
+-------------------------------------------------------------------------------
+
+
+-------------------------------------------------------------------------------
